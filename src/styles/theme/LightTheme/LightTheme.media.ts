@@ -1,5 +1,5 @@
 export const media = {
   mobile: {
-    maxWidth: "700px",
+    maxWidth: "1000px",
   },
 };
