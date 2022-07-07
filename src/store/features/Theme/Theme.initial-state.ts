@@ -20,6 +20,7 @@ const initialState: DefaultTheme = {
   colors: {
     primaryColor: "",
     primaryColorLight: "",
+    primaryColorVeryLight: "",
     secondaryColor: "",
     secondaryColorLight: "",
     secondaryColorDark: "",

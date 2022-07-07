@@ -11,9 +11,7 @@ export const NavbarStyle = styled.nav`
   margin-left: 120px;
   margin-right: 195px;
 
-  padding-right: 80px;
-
   gap: 40px;
 
-  border-bottom: 1px solid ${({ theme }) => theme.colors.secondaryColor};
+  border-bottom: 3px solid ${({ theme }) => theme.colors.secondaryColorLight};
 `;

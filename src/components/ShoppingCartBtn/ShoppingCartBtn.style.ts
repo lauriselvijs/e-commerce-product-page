@@ -1,7 +1,12 @@
-import styled from "styled-components/macro";
+import styled, { css } from "styled-components/macro";
+import { IShoppingCartStyle } from "../ShoppingCart/ShoppingCart.style.d";
+
+export const ShoppingCartBtnContainerStyle = styled.div`
+  position: relative;
+  height: 60px;
+`;
 
 export const ShoppingCartBtnStyle = styled.button`
-  position: relative;
   width: 32px;
   height: 32px;
   border-radius: 50%;
@@ -11,12 +16,14 @@ export const ShoppingCartBtnStyle = styled.button`
   cursor: pointer;
 `;
 
-// FIXME:
-// [] - make cart color change when hovered over cart item counter
-export const ShoppingCartBtnIconStyle = styled.img`
-  :hover {
-    filter: hue-rotate(0deg) saturate(0%) brightness(0%);
-  }
+// TODO:
+// [] - Filter replace with color name
+export const ShoppingCartBtnIconStyle = styled.img<IShoppingCartStyle>`
+  ${({ showCart }) =>
+    showCart &&
+    css`
+      filter: hue-rotate(0deg) saturate(0%) brightness(0%);
+    `}
 `;
 
 export const ShoppingCartBtnItemAmountStyle = styled.div`

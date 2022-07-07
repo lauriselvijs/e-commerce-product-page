@@ -1,5 +1,7 @@
 import styled from "styled-components/macro";
 
+// TODO:
+// [] - Replace with ul and add li around a tags
 export const ProductCategoriesStyle = styled.div`
   display: flex;
   flex-direction: row;
@@ -11,10 +13,12 @@ export const ProductCategoriesStyle = styled.div`
   font-size: ${({ theme }) => theme.typography.fontSize.fontSizeMedium};
 `;
 
-export const ProductCategoriesItemStyle = styled.div`
+export const ProductCategoriesItemStyle = styled.a`
   cursor: pointer;
   color: ${({ theme }) => theme.colors.secondaryColorDark};
   padding-bottom: 50px;
+
+  text-decoration: none;
 
   :hover {
     color: ${({ theme }) => theme.colors.secondaryColorVeryDark};

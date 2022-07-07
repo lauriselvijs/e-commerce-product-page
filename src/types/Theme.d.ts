@@ -21,6 +21,7 @@ declare module "styled-components" {
     colors: {
       primaryColor: string;
       primaryColorLight: string;
+      primaryColorVeryLight: string;
       secondaryColor: string;
       secondaryColorLight: string;
       secondaryColorDark: string;

@@ -4,10 +4,9 @@ export const CustomerProfileBtnStyle = styled.button`
   border: none;
   border-radius: 50%;
 
-  position: absolute;
+  align-self: flex-start;
 
-  top: 30px;
-  right: 0px;
+  margin-top: -8px;
 
   width: 42px;
   height: 42px;
@@ -23,10 +22,12 @@ export const CustomerProfileBtnStyle = styled.button`
   }
 `;
 
-// TODO:
-// [] - check if needed if isn't needed delete
-export const CustomerProfileBtnImage = styled.img`
+export const CustomerProfileBtnImageStyle = styled.img`
   :hover {
     filter: contrast(120%);
   }
+`;
+
+export const CustomerProfileBtnLinkStyle = styled.a`
+  text-decoration: none;
 `;
