@@ -24,7 +24,7 @@ interface IShoppingCart {
 }
 
 const ShoppingCart = ({ showCart }: IShoppingCart) => {
-  const [hoverOverCart, setHoverOverCart] = useState(false);
+  const [hoverOverCart, setHoverOverCart] = useState<boolean>(false);
 
   const onShoppingCartMouseEnter = () => {
     setHoverOverCart(true);

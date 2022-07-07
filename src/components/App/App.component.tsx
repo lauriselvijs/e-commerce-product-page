@@ -25,8 +25,9 @@ const App = () => {
         <GlobalStyle />
         <Router>
           <Routes>
+            {/* path={"/product-page"} */}
             <Route path={"/"} element={<Layout />}>
-              <Route path={"/product-page"} element={<ProductPage />} />
+              <Route path={"/"} element={<ProductPage />} />
             </Route>
             <Route path={"*"} element={<NotFound />} />
           </Routes>

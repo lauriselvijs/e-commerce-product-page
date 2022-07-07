@@ -9,7 +9,7 @@ import {
 } from "./ShoppingCartBtn.style";
 
 const ShoppingCartBtn = () => {
-  const [showCart, setShowCart] = useState(false);
+  const [showCart, setShowCart] = useState<boolean>(false);
 
   const onShoppingCartContainerMouseEnter = () => {
     setShowCart(true);
@@ -19,12 +19,16 @@ const ShoppingCartBtn = () => {
     setShowCart(false);
   };
 
+  const onShoppingCartBtnClick = () => {
+    setShowCart(!showCart);
+  };
+
   return (
     <ShoppingCartBtnContainerStyle
       onMouseEnter={onShoppingCartContainerMouseEnter}
       onMouseLeave={onShoppingCartContainerMouseLeave}
     >
-      <ShoppingCartBtnStyle>
+      <ShoppingCartBtnStyle onClick={onShoppingCartBtnClick}>
         <ShoppingCartBtnIconStyle
           showCart={showCart}
           width={22}
