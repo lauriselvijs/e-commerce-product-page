@@ -1,6 +1,8 @@
 import styled from "styled-components/macro";
 
-export const CustomerProfileBtnStyle = styled.button`
+export const CustomerProfileLinkStyle = styled.a`
+  text-decoration: none;
+
   border: none;
   border-radius: 50%;
 
@@ -22,12 +24,8 @@ export const CustomerProfileBtnStyle = styled.button`
   }
 `;
 
-export const CustomerProfileBtnImageStyle = styled.img`
+export const CustomerProfilePicStyle = styled.img`
   :hover {
     filter: contrast(120%);
   }
-`;
-
-export const CustomerProfileBtnLinkStyle = styled.a`
-  text-decoration: none;
 `;

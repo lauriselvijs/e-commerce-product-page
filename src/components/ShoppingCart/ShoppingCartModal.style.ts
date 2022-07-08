@@ -1,7 +1,7 @@
 import styled from "styled-components/macro";
-import { IShoppingCartStyle } from "./ShoppingCart.style.d";
+import { IShoppingCartModalStyle } from "./ShoppingCartModal.style.d";
 
-export const ShoppingCartStyle = styled.div<IShoppingCartStyle>`
+export const ShoppingCartModalStyle = styled.div<IShoppingCartModalStyle>`
   display: ${({ showCart }) => (showCart ? "block" : "none")};
   position: absolute;
   top: 60px;
@@ -20,7 +20,7 @@ export const ShoppingCartStyle = styled.div<IShoppingCartStyle>`
   background-color: ${({ theme }) => theme.colors.primaryColorVeryLight};
 `;
 
-export const ShoppingCartTitleStyle = styled.div`
+export const ShoppingCartModalTitleStyle = styled.div`
   text-align: left;
   padding-top: 20px;
   padding-bottom: 20px;
@@ -33,40 +33,40 @@ export const ShoppingCartTitleStyle = styled.div`
   border-bottom: 3px solid ${({ theme }) => theme.colors.secondaryColorLight};
 `;
 
-export const ShoppingCartContentsStyle = styled.div`
+export const ShoppingCartModalContentsStyle = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px 20px;
 `;
 
-export const ShoppingCartProductInfoStyle = styled.div`
+export const ShoppingCartModalProductInfoStyle = styled.div`
   display: flex;
   flex-direction: column;
   gap: 8px;
 `;
-export const ShoppingCartProductNameStyle = styled.div``;
-export const ShoppingCartProductPriceInfoStyle = styled.div``;
-export const ShoppingCartProductPriceInfoIndentStyle = styled.span`
+export const ShoppingCartModalProductNameStyle = styled.div``;
+export const ShoppingCartModalProductPriceInfoStyle = styled.div``;
+export const ShoppingCartModalProductPriceInfoIndentStyle = styled.span`
   color: ${({ theme }) => theme.colors.secondaryColorVeryDark};
   font-weight: ${({ theme }) => theme.font.fontWeight.fontWeightBold};
 `;
 
-export const ShoppingCartProductImageStyle = styled.img`
+export const ShoppingCartModalProductImageStyle = styled.img`
   border-radius: 5px;
 `;
-export const ShoppingCartProductDeleteBtnStyle = styled.button`
+export const ShoppingCartModalProductDeleteBtnStyle = styled.button`
   border: none;
   background-color: transparent;
   cursor: pointer;
 `;
-export const ShoppingCartProductDeleteBtnImgStyle = styled.img`
+export const ShoppingCartModalProductDeleteBtnImgStyle = styled.img`
   :hover {
     filter: contrast(0%);
   }
 `;
 
-export const ShoppingCartFooterStyle = styled.div`
+export const ShoppingCartModalFooterStyle = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -76,6 +76,6 @@ export const ShoppingCartFooterStyle = styled.div`
   padding-right: 30px;
 `;
 
-export const ShoppingCartCheckoutBtnLinkStyle = styled.a`
+export const ShoppingCartModalCheckoutLinkStyle = styled.a`
   text-decoration: none;
 `;

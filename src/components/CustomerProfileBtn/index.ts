@@ -1,3 +1,3 @@
-import CustomerProfileBtn from "./CustomerProfileBtn.component";
+import CustomerProfileLink from "./CustomerProfileLink.component";
 
-export default CustomerProfileBtn;
+export default CustomerProfileLink;

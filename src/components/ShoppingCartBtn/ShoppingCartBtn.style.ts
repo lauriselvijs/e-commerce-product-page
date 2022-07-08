@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components/macro";
-import { IShoppingCartStyle } from "../ShoppingCart/ShoppingCart.style.d";
+import { IShoppingCartModalStyle } from "../ShoppingCart/ShoppingCartModal.style.d";
 
 export const ShoppingCartBtnContainerStyle = styled.div`
   position: relative;
@@ -18,7 +18,7 @@ export const ShoppingCartBtnStyle = styled.button`
 
 // TODO:
 // [] - Filter replace with color name
-export const ShoppingCartBtnIconStyle = styled.img<IShoppingCartStyle>`
+export const ShoppingCartBtnIconStyle = styled.img<IShoppingCartModalStyle>`
   ${({ showCart }) =>
     showCart &&
     css`

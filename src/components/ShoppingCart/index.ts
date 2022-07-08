@@ -1,3 +1,3 @@
-import ShoppingCart from "./ShoppingCart.component";
+import ShoppingCartModal from "./ShoppingCartModal.component";
 
-export default ShoppingCart;
+export default ShoppingCartModal;
