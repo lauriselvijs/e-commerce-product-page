@@ -1,8 +1,9 @@
 import styled, { css } from "styled-components/macro";
-import FirstProductImageThumbnail from "../../asset/images/image-product-1-thumbnail.jpg";
+import { IProductPageGalleryThumbnailStyle } from "./ProductPageGallery.style.d";
 
-interface IProductPageGalleryThumbnail {
-  selected: boolean;
+export interface IProductPageGalleryFooterStyle {
+  width?: string;
+  justifyContent?: string;
 }
 
 export const ProductPageGalleryStyle = styled.div`
@@ -12,21 +13,22 @@ export const ProductPageGalleryStyle = styled.div`
   align-items: center;
 `;
 
-export const ProductPageGalleryImg = styled.img`
+export const ProductPageGalleryImgStyle = styled.img`
   border-radius: 10px;
 `;
 
-export const ProductPageGalleryFooter = styled.div`
+export const ProductPageGalleryFooterStyle = styled.div<IProductPageGalleryFooterStyle>`
   display: flex;
-  justify-content: space-between;
+  justify-content: ${({ justifyContent }) =>
+    justifyContent ? justifyContent : "space-between"};
   align-items: center;
 
   padding-top: 20px;
 
-  width: 100%;
+  width: ${({ width }) => (width ? width : "100%")};
 `;
 
-export const ProductPageGalleryThumbnail = styled.img<IProductPageGalleryThumbnail>`
+export const ProductPageGalleryThumbnailStyle = styled.img<IProductPageGalleryThumbnailStyle>`
   border-radius: 10px;
 
   ${({ selected }) =>
@@ -44,12 +46,12 @@ export const ProductPageGalleryThumbnail = styled.img<IProductPageGalleryThumbna
   }
 `;
 
-export const ProductPageGalleryThumbnailBtn = styled.button<IProductPageGalleryThumbnail>`
+export const ProductPageGalleryThumbnailBtnStyle = styled.button<IProductPageGalleryThumbnailStyle>`
   cursor: pointer;
-  background-color: transparent;
+  background-color: ${({ theme }) => theme.colors.primaryColorVeryLight};
 
-  height: 64px;
-  width: 64px;
+  height: ${({ selected }) => (selected ? "64px" : "63px")};
+  width: ${({ selected }) => (selected ? "64px" : "63px")};
 
   border-radius: 10px;
   ${({ selected }) =>

@@ -1,10 +1,10 @@
-import React, { MouseEvent, useState } from "react";
+import React, { useState } from "react";
 import {
-  ProductPageGalleryFooter,
-  ProductPageGalleryImg,
+  ProductPageGalleryFooterStyle,
+  ProductPageGalleryImgStyle,
   ProductPageGalleryStyle,
-  ProductPageGalleryThumbnail,
-  ProductPageGalleryThumbnailBtn,
+  ProductPageGalleryThumbnailStyle,
+  ProductPageGalleryThumbnailBtnStyle,
 } from "./ProductPageGallery.style";
 import FirstProductImage from "../../asset/images/image-product-1.jpg";
 import SecondProductImage from "../../asset/images/image-product-2.jpg";
@@ -27,43 +27,46 @@ const ProductPageGallery = () => {
   const [productImage, setProductImage] = useState<string>(
     PRODUCT_IMAGE_GALLERY[0].image
   );
-  const [selectedImage, setSelectedImage] = useState<string>(
-    PRODUCT_IMAGE_GALLERY[0].image
-  );
+  const [showGalleryOverlay, setShowGalleryOverlay] = useState<boolean>(false);
 
-  const onProductPageGalleryThumbnailBtnClick = (image: string) => {
+  const onProductPageGalleryThumbnailBtnClick = (image: string): void => {
     setProductImage(image);
+  };
+
+  const onProductPageGalleryImgBtnClick = (): void => {
+    setShowGalleryOverlay(!showGalleryOverlay);
   };
 
   const productThumbnailGallery = PRODUCT_IMAGE_GALLERY.map(
     ({ thumbnail, image }) => (
-      <ProductPageGalleryThumbnailBtn
+      <ProductPageGalleryThumbnailBtnStyle
         selected={image === productImage}
         onClick={() => onProductPageGalleryThumbnailBtnClick(image)}
         key={thumbnail}
       >
-        <ProductPageGalleryThumbnail
+        <ProductPageGalleryThumbnailStyle
           selected={image === productImage}
           width={63}
           height={64}
           src={thumbnail}
           alt="Product thumbnail"
         />
-      </ProductPageGalleryThumbnailBtn>
+      </ProductPageGalleryThumbnailBtnStyle>
     )
   );
 
   return (
     <ProductPageGalleryStyle>
-      <ProductPageGalleryImg
+      <ProductPageGalleryImgStyle
+        onClick={onProductPageGalleryImgBtnClick}
         width={396}
         height={396}
         src={productImage}
         alt="Product"
       />
-      <ProductPageGalleryFooter>
+      <ProductPageGalleryFooterStyle>
         {productThumbnailGallery}
-      </ProductPageGalleryFooter>
+      </ProductPageGalleryFooterStyle>
     </ProductPageGalleryStyle>
   );
 };
