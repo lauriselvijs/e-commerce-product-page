@@ -15,3 +15,17 @@ export const PrimaryBtnStyle = styled.button`
 
   cursor: pointer;
 `;
+
+export const SecondaryBtnStyle = styled.button`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+
+  width: 48px;
+  height: 48px;
+
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+`;

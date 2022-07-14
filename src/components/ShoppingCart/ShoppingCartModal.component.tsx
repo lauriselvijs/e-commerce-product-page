@@ -16,12 +16,7 @@ import {
 import ProductImageThumbnail from "../../asset/images/image-product-1-thumbnail.jpg";
 import DeleteIcon from "../../asset/images/icons/icon-delete.svg";
 import { PrimaryBtnStyle } from "../../styles/shared/Button.style";
-
-// TODO:
-// [] - check if needed if not move hidden prop to global state
-interface IShoppingCartModal {
-  showCart: boolean;
-}
+import { IShoppingCartModal } from "./ShoppingCartModal.component.d";
 
 const ShoppingCartModal = ({ showCart }: IShoppingCartModal) => {
   const [hoverOverCart, setHoverOverCart] = useState<boolean>(false);

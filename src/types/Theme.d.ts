@@ -26,6 +26,7 @@ declare module "styled-components" {
       secondaryColorLight: string;
       secondaryColorDark: string;
       secondaryColorVeryDark: string;
+      overlayColor: string;
       white: string;
       black: string;
     };

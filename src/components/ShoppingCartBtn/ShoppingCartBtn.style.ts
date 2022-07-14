@@ -6,7 +6,7 @@ export const ShoppingCartBtnContainerStyle = styled.div`
   height: 60px;
 `;
 
-export const ShoppingCartBtnStyle = styled.button`
+export const ShoppingCartBtnStyle = styled.button<IShoppingCartModalStyle>`
   width: 32px;
   height: 32px;
   border-radius: 50%;
@@ -14,15 +14,13 @@ export const ShoppingCartBtnStyle = styled.button`
 
   background-color: transparent;
   cursor: pointer;
-`;
 
-// TODO:
-// [] - Filter replace with color name
-export const ShoppingCartBtnIconStyle = styled.img<IShoppingCartModalStyle>`
   ${({ showCart }) =>
     showCart &&
     css`
-      filter: hue-rotate(0deg) saturate(0%) brightness(0%);
+      path {
+        fill: ${({ theme }) => theme.colors.secondaryColorVeryDark};
+      }
     `}
 `;
 
