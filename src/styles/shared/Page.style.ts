@@ -12,9 +12,23 @@ export const PageStyle = styled.main`
   transition: padding-left 0.5s;
 
   @media (max-width: ${({ theme }) => theme.media.tablet.maxWidth}) {
-    padding-left: 120px;
+    padding-left: 60px;
     padding-right: 120px;
 
     transition: padding-left 0.5s;
+  }
+
+  @media (max-width: ${({ theme }) => theme.media.mobile.maxWidth}) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-left: 0px;
+    padding-right: 0px;
+
+    padding-top: 0px;
+
+    padding-bottom: 80px;
   }
 `;

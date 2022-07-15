@@ -21,6 +21,12 @@ export const ProductPageProductDescStyle = styled.div`
 
     transition: padding-top 0.5s;
   }
+
+  @media (max-width: ${({ theme }) => theme.media.mobile.maxWidth}) {
+    padding-top: 20px;
+
+    width: 90%;
+  }
 `;
 
 export const ProductPageProductCompanyStyle = styled.div`
@@ -39,6 +45,10 @@ export const ProductPageProductNameStyle = styled.h1`
   font-size: ${({ theme }) => theme.typography.fontSize.fontSizeLarge};
 
   color: ${({ theme }) => theme.colors.secondaryColorVeryDark};
+
+  @media (max-width: ${({ theme }) => theme.media.mobile.maxWidth}) {
+    margin-top: 10px;
+  }
 `;
 export const ProductPageProductInfoStyle = styled.p`
   font-weight: ${({ theme }) => theme.font.fontWeight.fontWeightMedium};
@@ -52,6 +62,16 @@ export const ProductPageProductPriceContainerStyle = styled.div`
   flex-direction: column;
   align-items: flex-start;
   gap: 10px;
+
+  @media (max-width: ${({ theme }) => theme.media.mobile.maxWidth}) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+
+    gap: 5vw;
+  }
 `;
 export const ProductPageProductDiscPriceStyle = styled.div`
   display: flex;
@@ -92,10 +112,17 @@ export const ProductPageProductDescFooterStyle = styled.div`
 
   padding-top: 30px;
 
+  transition: padding-top 0.5s;
+
   @media (max-width: ${({ theme }) => theme.media.tablet.maxWidth}) {
+    padding-top: 15px;
+
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
+
+    transition: padding-top 0.5s;
   }
 `;
 
@@ -124,12 +151,14 @@ export const ProductPageQuantityBtnContainerStyle = styled.div`
 
     transition: width 0.5s;
   }
+
+  @media (max-width: ${({ theme }) => theme.media.mobile.maxWidth}) {
+    width: 85vw;
+
+    transition: width 0.5s;
+  }
 `;
 
-export const ProductPageQuantityIncBtnStyle = styled(QuantityBtnStyle)`
-  top: 0px;
-  left: 0px;
-`;
 export const ProductPageQuantityDecBtnStyle = styled(QuantityBtnStyle)`
   top: 0px;
   left: 105px;
@@ -139,6 +168,16 @@ export const ProductPageQuantityDecBtnStyle = styled(QuantityBtnStyle)`
 
     transition: left 0.5s;
   }
+
+  @media (max-width: ${({ theme }) => theme.media.mobile.maxWidth}) {
+    left: 72vw;
+
+    transition: left 0.5s;
+  }
+`;
+export const ProductPageQuantityIncBtnStyle = styled(QuantityBtnStyle)`
+  top: 0px;
+  left: 0px;
 `;
 
 // TODO:
@@ -160,5 +199,11 @@ export const ProductPageAddToCartBtnStyle = styled(PrimaryBtnStyle)`
     }
   }
 
-  box-shadow: 0px 20px 20px 0px ${({ theme }) => theme.colors.primaryColorLight}; ;
+  box-shadow: 0px 20px 20px 0px ${({ theme }) => theme.colors.primaryColorLight};
+
+  @media (max-width: ${({ theme }) => theme.media.mobile.maxWidth}) {
+    width: 85vw;
+
+    transition: width 0.5s;
+  }
 `;

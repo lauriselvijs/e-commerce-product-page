@@ -2,27 +2,33 @@ import React from "react";
 import {
   ProductCategoriesStyle,
   ProductCategoriesItemStyle,
+  HamburgerMenuBtnStyle,
+  HamburgerMenuIconStyle,
+  HamburgerMenuBtnContainerStyle,
 } from "./ProductCategories.style";
-
-const CATEGORIES = [
-  { categoryName: "Collections", href: "/collections" },
-  { categoryName: "Men", href: "/men" },
-  { categoryName: "Women", href: "/women" },
-  { categoryName: "About", href: "/about" },
-  { categoryName: "Contact", href: "/contact" },
-];
+import HamburgerIcon from "../../asset/images/icons/icon-menu.svg";
+import HamburgerMenuOverlay from "../HamburgerMenuOverlay";
+import ProductCategoriesItems from "../ProductCategoriesItems";
+import { ProductCategoriesItemsStyle } from "../../styles/shared/List.style";
 
 const ProductCategories = () => {
-  const productCategoriesItems = CATEGORIES.map(
-    ({ categoryName, href }, index) => (
-      <ProductCategoriesItemStyle key={index} href={href}>
-        {categoryName}
-      </ProductCategoriesItemStyle>
-    )
-  );
-
   return (
-    <ProductCategoriesStyle>{productCategoriesItems}</ProductCategoriesStyle>
+    <>
+      <HamburgerMenuOverlay />
+      <HamburgerMenuBtnContainerStyle>
+        <HamburgerMenuBtnStyle>
+          <HamburgerMenuIconStyle
+            src={HamburgerIcon}
+            width={16}
+            height={15}
+            alt="Menu"
+          />
+        </HamburgerMenuBtnStyle>
+      </HamburgerMenuBtnContainerStyle>
+      <ProductCategoriesItemsStyle showOnMobile={false}>
+        <ProductCategoriesItems />
+      </ProductCategoriesItemsStyle>
+    </>
   );
 };
 

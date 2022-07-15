@@ -18,6 +18,10 @@ export const PrimaryBtnStyle = styled.button`
   :hover {
     opacity: 0.4;
   }
+
+  @media (max-width: ${({ theme }) => theme.media.mobile.maxWidth}) {
+    width: 80vw;
+  }
 `;
 
 export const SecondaryBtnStyle = styled.button`

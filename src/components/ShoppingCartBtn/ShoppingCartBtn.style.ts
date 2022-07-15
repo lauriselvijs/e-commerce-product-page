@@ -4,6 +4,10 @@ import { IShoppingCartModalStyle } from "../ShoppingCart/ShoppingCartModal.style
 export const ShoppingCartBtnContainerStyle = styled.div`
   position: relative;
   height: 60px;
+
+  @media (max-width: ${({ theme }) => theme.media.mobile.maxWidth}) {
+    order: 3;
+  }
 `;
 
 export const ShoppingCartBtnStyle = styled.button<IShoppingCartModalStyle>`

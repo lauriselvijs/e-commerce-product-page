@@ -18,6 +18,22 @@ export const ShoppingCartModalStyle = styled.div<IShoppingCartModalStyle>`
   color: ${({ theme }) => theme.colors.secondaryColorDark};
 
   background-color: ${({ theme }) => theme.colors.primaryColorVeryLight};
+
+  transition: right 1s;
+
+  @media (max-width: ${({ theme }) => theme.media.tablet.maxWidth}) {
+    right: -200%;
+
+    transition: right 0.5s;
+  }
+
+  @media (max-width: ${({ theme }) => theme.media.mobile.maxWidth}) {
+    top: 70px;
+    right: -225%;
+    width: 95vw;
+
+    transition: right 0.5s;
+  }
 `;
 
 export const ShoppingCartModalTitleStyle = styled.div`

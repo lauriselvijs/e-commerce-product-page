@@ -1,23 +1,5 @@
 import styled from "styled-components/macro";
 import { SecondaryBtnStyle } from "../../styles/shared/Button.style";
-import { IProductPageGalleryOverlayStyle } from "./ProductPageGalleryOverlay.style.d";
-
-export const ProductPageGalleryOverlayStyle = styled.div<IProductPageGalleryOverlayStyle>`
-  display: ${({ selected }) => (selected ? "flex" : "none")};
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-
-  background-color: ${({ theme }) => theme.colors.overlayColor};
-`;
 
 export const ProductPageGalleryOverlayModalStyle = styled.div`
   position: relative;
@@ -30,7 +12,7 @@ export const ProductPageGalleryOverlayModalStyle = styled.div`
   margin-top: 100px;
 `;
 
-export const ProductPageGalleryOverlayModalLeftArrowBtn = styled(
+export const ProductPageGalleryOverlayModalLeftArrowBtnStyle = styled(
   SecondaryBtnStyle
 )`
   top: 40%;
@@ -41,7 +23,7 @@ export const ProductPageGalleryOverlayModalLeftArrowBtn = styled(
   }
 `;
 
-export const ProductPageGalleryOverlayModalRightArrowBtn = styled(
+export const ProductPageGalleryOverlayModalRightArrowBtnStyle = styled(
   SecondaryBtnStyle
 )`
   top: 40%;
@@ -52,7 +34,7 @@ export const ProductPageGalleryOverlayModalRightArrowBtn = styled(
   }
 `;
 
-export const ProductPageGalleryOverlayModalCloseBtn = styled.button`
+export const ProductPageGalleryOverlayModalCloseBtnStyle = styled.button`
   position: absolute;
 
   transform: scale(1.2);
