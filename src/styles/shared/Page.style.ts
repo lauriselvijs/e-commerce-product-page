@@ -2,8 +2,8 @@ import styled from "styled-components/macro";
 
 export const PageStyle = styled.main`
   display: flex;
-  align-items: flex-start;
   justify-content: space-between;
+  align-items: flex-start;
 
   padding-left: 320px;
   padding-right: 320px;

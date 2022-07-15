@@ -1,5 +1,8 @@
 import styled from "styled-components/macro";
-import { PrimaryBtnStyle } from "../../styles/shared/Button.style";
+import {
+  PrimaryBtnStyle,
+  QuantityBtnStyle,
+} from "../../styles/shared/Button.style";
 
 export const ProductPageProductDescStyle = styled.div`
   display: flex;
@@ -53,6 +56,9 @@ export const ProductPageProductDiscPriceStyle = styled.div`
   color: ${({ theme }) => theme.colors.secondaryColorVeryDark};
 `;
 export const ProductPageProductPriceDiscPercentageBadgeStyle = styled.div`
+  text-align: center;
+  vertical-align: center;
+
   font-weight: ${({ theme }) => theme.font.fontWeight.fontWeightBold};
   font-size: ${({ theme }) => theme.typography.fontSize.fontSizeMedium};
 
@@ -79,7 +85,7 @@ export const ProductPageProductDescFooterStyle = styled.div`
   padding-top: 30px;
 `;
 
-export const ProductPageQuantityBtnStyle = styled.div`
+export const ProductPageQuantityBtnContainerStyle = styled.div`
   position: relative;
   display: flex;
   justify-content: space-around;
@@ -98,41 +104,33 @@ export const ProductPageQuantityBtnStyle = styled.div`
   background-color: ${({ theme }) => theme.colors.secondaryColorLight};
 `;
 
-export const ProductPageQuantityIncBtnStyle = styled.button`
-  position: absolute;
-  z-index: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  background-color: transparent;
-  border: none;
-
-  cursor: pointer;
-  height: 55px;
-  width: 55px;
-
+export const ProductPageQuantityIncBtnStyle = styled(QuantityBtnStyle)`
   top: 0px;
   left: 0px;
 `;
-export const ProductPageQuantityDecBtnStyle = styled.button`
-  position: absolute;
-  z-index: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: none;
-
-  background-color: transparent;
-
-  cursor: pointer;
-  height: 55px;
-  width: 55px;
-
+export const ProductPageQuantityDecBtnStyle = styled(QuantityBtnStyle)`
   top: 0px;
   left: 105px;
 `;
 
-export const ProductPageQuantityIncStyle = styled.img``;
-export const ProductPageQuantityDecStyle = styled.img``;
-export const ProductPageAddToCartBtnStyle = styled(PrimaryBtnStyle)``;
+// TODO:
+// []  - change to svg and target svg icon opacity on hover inside wrapper button
+export const ProductPageQuantityIncIconStyle = styled.img``;
+export const ProductPageQuantityDecIconStyle = styled.img``;
+export const ProductPageAddToCartBtnStyle = styled(PrimaryBtnStyle)`
+  width: 250px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+
+  svg {
+    transform: scale(0.8);
+    path {
+      fill: ${({ theme }) => theme.colors.primaryColorVeryLight};
+    }
+  }
+
+  box-shadow: 0px 20px 20px 0px ${({ theme }) => theme.colors.primaryColorLight}; ;
+`;

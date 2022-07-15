@@ -14,6 +14,10 @@ export const PrimaryBtnStyle = styled.button`
   border-radius: 10px;
 
   cursor: pointer;
+
+  :hover {
+    opacity: 0.4;
+  }
 `;
 
 export const SecondaryBtnStyle = styled.button`
@@ -28,4 +32,18 @@ export const SecondaryBtnStyle = styled.button`
   border-radius: 50%;
   border: none;
   cursor: pointer;
+`;
+
+export const QuantityBtnStyle = styled.button`
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: transparent;
+  border: none;
+
+  cursor: pointer;
+  height: 55px;
+  width: 55px;
 `;
