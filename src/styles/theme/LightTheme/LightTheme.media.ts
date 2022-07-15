@@ -1,5 +1,8 @@
 export const media = {
   mobile: {
-    maxWidth: "1000px",
+    maxWidth: "935px",
+  },
+  tablet: {
+    maxWidth: "1300px",
   },
 };

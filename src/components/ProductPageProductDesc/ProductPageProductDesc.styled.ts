@@ -10,9 +10,17 @@ export const ProductPageProductDescStyle = styled.div`
   justify-content: flex-start;
   align-items: flex-start;
 
-  padding-top: 80px;
+  padding-top: 60px;
 
   width: 40%;
+
+  transition: padding-top 0.5s;
+
+  @media (max-width: ${({ theme }) => theme.media.tablet.maxWidth}) {
+    padding-top: 0px;
+
+    transition: padding-top 0.5s;
+  }
 `;
 
 export const ProductPageProductCompanyStyle = styled.div`
@@ -83,6 +91,12 @@ export const ProductPageProductDescFooterStyle = styled.div`
   gap: 20px;
 
   padding-top: 30px;
+
+  @media (max-width: ${({ theme }) => theme.media.tablet.maxWidth}) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 export const ProductPageQuantityBtnContainerStyle = styled.div`
@@ -102,6 +116,14 @@ export const ProductPageQuantityBtnContainerStyle = styled.div`
 
   color: ${({ theme }) => theme.colors.secondaryColorVeryDark};
   background-color: ${({ theme }) => theme.colors.secondaryColorLight};
+
+  transition: width 0.5s;
+
+  @media (max-width: ${({ theme }) => theme.media.tablet.maxWidth}) {
+    width: 250px;
+
+    transition: width 0.5s;
+  }
 `;
 
 export const ProductPageQuantityIncBtnStyle = styled(QuantityBtnStyle)`
@@ -111,6 +133,12 @@ export const ProductPageQuantityIncBtnStyle = styled(QuantityBtnStyle)`
 export const ProductPageQuantityDecBtnStyle = styled(QuantityBtnStyle)`
   top: 0px;
   left: 105px;
+
+  @media (max-width: ${({ theme }) => theme.media.tablet.maxWidth}) {
+    left: 195px;
+
+    transition: left 0.5s;
+  }
 `;
 
 // TODO:

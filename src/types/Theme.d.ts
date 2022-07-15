@@ -34,6 +34,9 @@ declare module "styled-components" {
       mobile: {
         maxWidth: string;
       };
+      tablet: {
+        maxWidth: string;
+      };
     };
   }
 }

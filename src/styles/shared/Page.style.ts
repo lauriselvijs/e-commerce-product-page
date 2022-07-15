@@ -8,4 +8,13 @@ export const PageStyle = styled.main`
   padding-left: 320px;
   padding-right: 320px;
   padding-top: 80px;
+
+  transition: padding-left 0.5s;
+
+  @media (max-width: ${({ theme }) => theme.media.tablet.maxWidth}) {
+    padding-left: 120px;
+    padding-right: 120px;
+
+    transition: padding-left 0.5s;
+  }
 `;
