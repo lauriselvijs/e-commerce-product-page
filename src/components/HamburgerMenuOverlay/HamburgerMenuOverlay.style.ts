@@ -5,6 +5,26 @@ export const HamburgerMenuOverlayStyle = styled(OverlayStyle)`
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
+
+  // enter from
+  .fade-enter {
+    background-color: green;
+  }
+
+  // enter to
+  .fade-enter-active {
+    background-color: red;
+  }
+
+  // exit from
+  .fade-exit {
+    background-color: blue;
+  }
+
+  // exit to
+  .fade-exit-active {
+    background-color: black;
+  }
 `;
 
 // TODO:
@@ -23,19 +43,6 @@ export const HamburgerMenuOverlayModalStyle = styled.div`
   padding-top: 30px;
   padding-bottom: 30px;
   padding-left: 30px;
-
-  animation-duration: 0.5s;
-  animation-name: slide-in;
-
-  @keyframes slide-in {
-    from {
-      width: 0vw;
-    }
-
-    to {
-      width: 60vw;
-    }
-  }
 `;
 
 export const HamburgerMenuOverlayModalCloseBtnStyle = styled.button`
