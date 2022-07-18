@@ -1,6 +1,7 @@
 import styled from "styled-components/macro";
 
 export const ProductPageGalleryStyle = styled.div`
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;

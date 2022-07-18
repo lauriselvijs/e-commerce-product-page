@@ -1,5 +1,4 @@
 import styled from "styled-components/macro";
-import { SecondaryBtnStyle } from "../../styles/shared/Button.style";
 
 export const ProductPageGalleryOverlayModalStyle = styled.div`
   position: relative;
@@ -10,28 +9,6 @@ export const ProductPageGalleryOverlayModalStyle = styled.div`
   align-items: center;
 
   margin-top: 100px;
-`;
-
-export const ProductPageGalleryOverlayModalLeftArrowBtnStyle = styled(
-  SecondaryBtnStyle
-)`
-  top: 40%;
-  left: -4%;
-
-  :hover path {
-    stroke: ${({ theme }) => theme.colors.primaryColor};
-  }
-`;
-
-export const ProductPageGalleryOverlayModalRightArrowBtnStyle = styled(
-  SecondaryBtnStyle
-)`
-  top: 40%;
-  left: 95%;
-
-  :hover path {
-    stroke: ${({ theme }) => theme.colors.primaryColor};
-  }
 `;
 
 export const ProductPageGalleryOverlayModalCloseBtnStyle = styled.button`

@@ -1,34 +1,46 @@
 import styled from "styled-components/macro";
 import { OverlayStyle } from "../../styles/shared/Overlay.style";
 
+interface IHamburgerMenuOverlayModalCloseBtnStyle {
+  show: boolean;
+}
+
 export const HamburgerMenuOverlayStyle = styled(OverlayStyle)`
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
 
   // enter from
-  .fade-enter {
-    background-color: green;
+  .slide-in-enter {
+    padding: 0;
+    margin: 0;
+
+    width: 0vw;
   }
 
   // enter to
-  .fade-enter-active {
-    background-color: red;
+  .slide-in-enter-active {
+    width: 60vw;
+
+    transition: width 200ms;
   }
 
   // exit from
-  .fade-exit {
-    background-color: blue;
+  .slide-in-exit {
+    width: 60vw;
   }
 
   // exit to
-  .fade-exit-active {
-    background-color: black;
+  .slide-in-exit-active {
+    padding: 0;
+    margin: 0;
+
+    width: 0vw;
+
+    transition: width 200ms;
   }
 `;
 
-// TODO:
-// [] - add animation on modal enter and leave
 export const HamburgerMenuOverlayModalStyle = styled.div`
   display: flex;
   flex-direction: column;
@@ -51,4 +63,6 @@ export const HamburgerMenuOverlayModalCloseBtnStyle = styled.button`
 
   cursor: pointer;
 `;
-export const HamburgerMenuOverlayModalCloseBtnIconStyle = styled.img``;
+export const HamburgerMenuOverlayModalCloseBtnIconStyle = styled.img<IHamburgerMenuOverlayModalCloseBtnStyle>`
+  display: ${({ show }) => (show ? "block" : "none")};
+`;

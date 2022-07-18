@@ -1,4 +1,5 @@
 import styled from "styled-components/macro";
+import { ISecondaryBtnStyle } from "../../types/Button.style";
 
 export const PrimaryBtnStyle = styled.button`
   height: 55px;
@@ -24,7 +25,7 @@ export const PrimaryBtnStyle = styled.button`
   }
 `;
 
-export const SecondaryBtnStyle = styled.button`
+export const SecondaryBtnStyle = styled.button<ISecondaryBtnStyle>`
   display: flex;
   justify-content: center;
   align-items: center;
