@@ -10,6 +10,7 @@ import {
   persistStore,
 } from "redux-persist";
 import storage from "redux-persist/lib/storage";
+import { CartName } from "../features/Cart/Cart.slice";
 import { HamburgerMenuName } from "../features/HamburgerMenu/HamburgerMenu.slice";
 import rootReducer from "./reducer";
 
@@ -17,7 +18,7 @@ const persistConfig = {
   key: "root",
   version: 1,
   storage,
-  blacklist: [HamburgerMenuName],
+  blacklist: [HamburgerMenuName, CartName],
 };
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
