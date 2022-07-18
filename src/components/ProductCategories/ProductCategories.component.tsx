@@ -1,7 +1,5 @@
 import React from "react";
 import {
-  ProductCategoriesStyle,
-  ProductCategoriesItemStyle,
   HamburgerMenuBtnStyle,
   HamburgerMenuIconStyle,
   HamburgerMenuBtnContainerStyle,
@@ -10,13 +8,26 @@ import HamburgerIcon from "../../asset/images/icons/icon-menu.svg";
 import HamburgerMenuOverlay from "../HamburgerMenuOverlay";
 import ProductCategoriesItems from "../ProductCategoriesItems";
 import { ProductCategoriesItemsStyle } from "../../styles/shared/List.style";
+import { useAppDispatch } from "../../hooks/Store.hook";
+import { HamburgerMenuActions } from "../../store/features/HamburgerMenu/HamburgerMenu.slice";
+import { bindActionCreators } from "@reduxjs/toolkit";
 
 const ProductCategories = () => {
+  const appDispatch = useAppDispatch();
+  const { showHamburgerMenu } = bindActionCreators(
+    HamburgerMenuActions,
+    appDispatch
+  );
+
+  const onHamburgerMenuBtnClick = () => {
+    showHamburgerMenu();
+  };
+
   return (
     <>
       <HamburgerMenuOverlay />
       <HamburgerMenuBtnContainerStyle>
-        <HamburgerMenuBtnStyle>
+        <HamburgerMenuBtnStyle onClick={onHamburgerMenuBtnClick}>
           <HamburgerMenuIconStyle
             src={HamburgerIcon}
             width={16}

@@ -10,26 +10,44 @@ import {
 import IconClose from "../../asset/images/icons/icon-close.svg";
 import { CSSTransition } from "react-transition-group";
 import { useDetectMobileScreen } from "../../hooks/Screen.hook";
+import { useAppDispatch, useAppSelector } from "../../hooks/Store.hook";
+import { RootState } from "../../store/app/store";
+import { bindActionCreators } from "@reduxjs/toolkit";
+import {
+  HamburgerMenuActions,
+  HamburgerMenuName,
+} from "../../store/features/HamburgerMenu/HamburgerMenu.slice";
 
 const HamburgerMenuOverlay = () => {
-  const [showHamburgerMenu, setShowHamburgerMenu] = useState<boolean>(true);
   const [showHamburgerMenuOverlay, setShowHamburgerMenuOverlay] =
-    useState<boolean>(true);
+    useState<boolean>(false);
 
+  const appDispatch = useAppDispatch();
+  const { closeHamburgerMenu } = bindActionCreators(
+    HamburgerMenuActions,
+    appDispatch
+  );
+  const { showHamburgerMenu } = useAppSelector(
+    (state: RootState) => state[HamburgerMenuName]
+  );
+  const hamburgerMenuOverlayModalRef = useRef(null);
   const isMobile = useDetectMobileScreen();
 
-  const hamburgerMenuOverlayModalRef = useRef(null);
-
   const onHamburgerMenuOverlayModalCloseBtnClick = () => {
-    setShowHamburgerMenu(false);
+    closeHamburgerMenu();
   };
 
-  const onTransitionEnd = () => {
-    setShowHamburgerMenuOverlay(!showHamburgerMenuOverlay);
+  const onHamburgerMenuTransitionEnd = () => {
+    setShowHamburgerMenuOverlay(false);
+  };
+
+  const onHamburgerMenuTransitionEnter = () => {
+    setShowHamburgerMenuOverlay(true);
   };
 
   useEffect(() => {
     !isMobile && setShowHamburgerMenuOverlay(false);
+    !isMobile && closeHamburgerMenu();
   }, [isMobile]);
 
   return (
@@ -37,10 +55,11 @@ const HamburgerMenuOverlay = () => {
       <CSSTransition
         nodeRef={hamburgerMenuOverlayModalRef}
         in={showHamburgerMenu}
-        classNames="slide-in"
+        classNames="slide"
         timeout={200}
+        onEnter={() => onHamburgerMenuTransitionEnter()}
+        onExited={() => onHamburgerMenuTransitionEnd()}
         unmountOnExit
-        onExited={() => onTransitionEnd()}
       >
         <HamburgerMenuOverlayModalStyle ref={hamburgerMenuOverlayModalRef}>
           <HamburgerMenuOverlayModalCloseBtnStyle

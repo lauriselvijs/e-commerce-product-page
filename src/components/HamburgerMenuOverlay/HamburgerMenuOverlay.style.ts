@@ -1,37 +1,21 @@
 import styled from "styled-components/macro";
 import { OverlayStyle } from "../../styles/shared/Overlay.style";
-
-interface IHamburgerMenuOverlayModalCloseBtnStyle {
-  show: boolean;
-}
+import { IHamburgerMenuOverlayModalCloseBtnStyle } from "./HamburgerMenuOverlay.style.d";
 
 export const HamburgerMenuOverlayStyle = styled(OverlayStyle)`
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
 
-  // enter from
-  .slide-in-enter {
-    padding: 0;
-    margin: 0;
-
-    width: 0vw;
+  .slide-enter {
+    width: 0;
   }
-
-  // enter to
-  .slide-in-enter-active {
+  .slide-enter-active {
     width: 60vw;
-
     transition: width 200ms;
   }
 
-  // exit from
-  .slide-in-exit {
-    width: 60vw;
-  }
-
-  // exit to
-  .slide-in-exit-active {
+  .slide-exit-active {
     padding: 0;
     margin: 0;
 
@@ -48,6 +32,19 @@ export const HamburgerMenuOverlayModalStyle = styled.div`
   align-items: flex-start;
 
   background-color: ${({ theme }) => theme.colors.primaryColorVeryLight};
+
+  // animation-duration: 200ms;
+  // animation-name: slide-in;
+
+  // @keyframes slide-in {
+  //   from {
+  //     width: 0vw;
+  //   }
+
+  //   to {
+  //     width: 60vw;
+  //   }
+  // }
 
   width: 60vw;
   height: 100vh;
