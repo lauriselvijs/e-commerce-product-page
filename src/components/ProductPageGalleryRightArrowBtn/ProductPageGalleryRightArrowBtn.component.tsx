@@ -1,18 +1,25 @@
 import React from "react";
 import { IButton } from "../../types/Button";
-import { ProductPageGalleryOverlayModalRightArrowBtnStyle } from "./ProductPageGalleryRightArrowBtn.style";
+import { ProductPageGalleryRightArrowBtnStyle } from "./ProductPageGalleryRightArrowBtn.style";
+import { bindActionCreators } from "@reduxjs/toolkit";
+import { ProductGalleryActions } from "../../store/features/ProductGallery/ProductGallery.slice";
+import { useAppDispatch } from "../../hooks/Store.hook";
+import { SHOES } from "../../constants/Products.const";
 
 const ProductPageGalleryRightArrowBtn = ({ top, left }: IButton) => {
-  const onProductPageGalleryOverlayModalRightArrowBtn = () => {
-    console.log("show prev image");
+  const appDispatch = useAppDispatch();
+  const { nextImg } = bindActionCreators(ProductGalleryActions, appDispatch);
+
+  const onProductPageGalleryRightArrowBtnClick = () => {
+    nextImg(SHOES.product_gallery);
   };
 
   return (
-    <ProductPageGalleryOverlayModalRightArrowBtnStyle
+    <ProductPageGalleryRightArrowBtnStyle
       top={top}
       left={left}
       aria-label="Next image"
-      onClick={onProductPageGalleryOverlayModalRightArrowBtn}
+      onClick={onProductPageGalleryRightArrowBtnClick}
     >
       <svg width="13" height="18" xmlns="http://www.w3.org/2000/svg">
         <path
@@ -23,7 +30,7 @@ const ProductPageGalleryRightArrowBtn = ({ top, left }: IButton) => {
           fillRule="evenodd"
         />
       </svg>
-    </ProductPageGalleryOverlayModalRightArrowBtnStyle>
+    </ProductPageGalleryRightArrowBtnStyle>
   );
 };
 

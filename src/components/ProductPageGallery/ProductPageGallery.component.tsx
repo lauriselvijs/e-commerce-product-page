@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import FirstProductImage from "../../asset/images/image-product-1.jpg";
 import ProductThumbnailGallery from "../ProductThumbnailGallery";
 import {
   ProductPageGalleryFooterStyle,
@@ -9,19 +8,34 @@ import { ProductPageGalleryStyle } from "./ProductPageGallery.style";
 import ProductPageGalleryRightArrowBtn from "../ProductPageGalleryRightArrowBtn";
 import ProductPageGalleryLeftArrowBtn from "../ProductPageGalleryLeftArrowBtn";
 import { useDetectMobileScreen } from "../../hooks/Screen.hook";
+import { useAppDispatch, useAppSelector } from "../../hooks/Store.hook";
+import { RootState } from "../../store/app/store";
+import { bindActionCreators } from "@reduxjs/toolkit";
+import {
+  ProductGalleryActions,
+  ProductGalleryName,
+} from "../../store/features/ProductGallery/ProductGallery.slice";
 
 const ProductPageGallery = () => {
-  const [showGalleryOverlay, setShowGalleryOverlay] = useState<boolean>(false);
   const [showArrowBtn, setShowArrowBtn] = useState<boolean>(false);
-
-  const onProductPageGalleryImgBtnClick = (): void => {
-    setShowGalleryOverlay(!showGalleryOverlay);
-  };
+  const { currentImg } = useAppSelector(
+    (state: RootState) => state[ProductGalleryName]
+  );
+  const appDispatch = useAppDispatch();
+  const { openGalleryOverlay, closeGalleryOverlay } = bindActionCreators(
+    ProductGalleryActions,
+    appDispatch
+  );
 
   const isMobile = useDetectMobileScreen();
 
+  const onProductPageGalleryImgClick = (): void => {
+    !isMobile && openGalleryOverlay();
+  };
+
   useEffect(() => {
     isMobile ? setShowArrowBtn(true) : setShowArrowBtn(false);
+    isMobile && closeGalleryOverlay();
   }, [isMobile]);
 
   return (
@@ -30,10 +44,10 @@ const ProductPageGallery = () => {
         <ProductPageGalleryLeftArrowBtn top={"45%"} left={"5%"} />
       )}
       <ProductPageGalleryImgStyle
-        onClick={onProductPageGalleryImgBtnClick}
+        onClick={onProductPageGalleryImgClick}
         width={396}
         height={396}
-        src={FirstProductImage}
+        src={currentImg}
         alt="Product"
       />
       {showArrowBtn && (

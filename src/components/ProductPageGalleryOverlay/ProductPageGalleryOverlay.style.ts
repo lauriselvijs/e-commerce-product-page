@@ -1,14 +1,21 @@
 import styled from "styled-components/macro";
 
 export const ProductPageGalleryOverlayModalStyle = styled.div`
-  position: relative;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
   margin-top: 100px;
+`;
+
+export const ProductPageGalleryImgContainerStyle = styled.div`
+  position: relative;
+
+  @media (max-width: ${({ theme }) => theme.media.tablet.maxWidth}) {
+    width: 476px;
+    height: 476px;
+  }
 `;
 
 export const ProductPageGalleryOverlayModalCloseBtnStyle = styled.button`

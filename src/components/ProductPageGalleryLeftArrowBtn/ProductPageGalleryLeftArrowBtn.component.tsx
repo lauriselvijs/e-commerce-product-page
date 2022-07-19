@@ -1,10 +1,17 @@
 import React from "react";
+import { useAppDispatch } from "../../hooks/Store.hook";
 import { IButton } from "../../types/Button.d";
 import { ProductPageGalleryOverlayModalLeftArrowBtnStyle } from "./ProductPageGalleryLeftArrowBtn.style";
+import { bindActionCreators } from "@reduxjs/toolkit";
+import { ProductGalleryActions } from "../../store/features/ProductGallery/ProductGallery.slice";
+import { SHOES } from "../../constants/Products.const";
 
 const ProductPageGalleryLeftArrowBtn = ({ top, left }: IButton) => {
-  const onProductPageGalleryOverlayModalLeftArrowBtn = () => {
-    console.log("show prev image");
+  const appDispatch = useAppDispatch();
+  const { prevImg } = bindActionCreators(ProductGalleryActions, appDispatch);
+
+  const onProductPageGalleryLeftArrowBtn = () => {
+    prevImg(SHOES.product_gallery);
   };
 
   return (
@@ -12,7 +19,7 @@ const ProductPageGalleryLeftArrowBtn = ({ top, left }: IButton) => {
       top={top}
       left={left}
       aria-label="Previous image"
-      onClick={onProductPageGalleryOverlayModalLeftArrowBtn}
+      onClick={onProductPageGalleryLeftArrowBtn}
     >
       <svg width="12" height="18" xmlns="http://www.w3.org/2000/svg">
         <path
