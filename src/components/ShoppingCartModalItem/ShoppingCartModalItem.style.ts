@@ -34,6 +34,10 @@ export const ShoppingCartModalProductPriceInfoIndentStyle = styled.span`
 
 export const ShoppingCartModalProductImageStyle = styled.img`
   border-radius: 5px;
+
+  @media (max-width: ${({ theme }) => theme.media.mobile.maxWidth}) {
+    padding-right: 10px;
+  }
 `;
 export const ShoppingCartModalProductDeleteBtnStyle = styled.button`
   border: none;

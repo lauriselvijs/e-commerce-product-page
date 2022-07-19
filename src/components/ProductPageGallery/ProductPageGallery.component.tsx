@@ -56,7 +56,7 @@ const ProductPageGallery = () => {
         />
       </ProductPageGalleryImgContainerStyle>
       {showArrowBtn && (
-        <ProductPageGalleryRightArrowBtn top={"45%"} left={"88%"} />
+        <ProductPageGalleryRightArrowBtn top={"45%"} left={"86%"} />
       )}
       <ProductPageGalleryFooterStyle>
         <ProductThumbnailGallery />

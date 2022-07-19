@@ -33,8 +33,7 @@ const ShoppingCartModal = ({ showCart }: IShoppingCartModal) => {
 
   return (
     <ShoppingCartModalStyle
-      // showCart={showCart || hoverOverCart}
-      showCart={true}
+      showCart={showCart || hoverOverCart}
       onMouseEnter={onShoppingCartModalMouseEnter}
       onMouseLeave={onShoppingCartModalMouseLeave}
     >
