@@ -21,7 +21,7 @@ export const ProductPageGalleryImgContainerStyle = styled.div`
   padding: 0;
 
   @media (max-width: ${({ theme }) => theme.media.mobile.maxWidth}) {
-    width: 108%;
+    width: 100vw;
     height: 396px;
   }
 `;

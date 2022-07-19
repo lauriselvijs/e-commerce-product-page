@@ -46,17 +46,17 @@ const ProductPageGallery = () => {
       {showArrowBtn && (
         <ProductPageGalleryLeftArrowBtn top={"45%"} left={"3%"} />
       )}
-      {/* <ProductPageGalleryImgContainerStyle> */}
-      <ProductPageGalleryImgStyle
-        onClick={onProductPageGalleryImgClick}
-        width={396}
-        height={396}
-        src={currentImg}
-        alt="Product"
-      />
-      {/* </ProductPageGalleryImgContainerStyle> */}
+      <ProductPageGalleryImgContainerStyle>
+        <ProductPageGalleryImgStyle
+          onClick={onProductPageGalleryImgClick}
+          width={396}
+          height={396}
+          src={currentImg}
+          alt="Product"
+        />
+      </ProductPageGalleryImgContainerStyle>
       {showArrowBtn && (
-        <ProductPageGalleryRightArrowBtn top={"45%"} left={"87%"} />
+        <ProductPageGalleryRightArrowBtn top={"45%"} left={"88%"} />
       )}
       <ProductPageGalleryFooterStyle>
         <ProductThumbnailGallery />

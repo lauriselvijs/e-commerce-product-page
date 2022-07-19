@@ -22,6 +22,10 @@ export const PrimaryBtnStyle = styled.button`
 
   @media (max-width: ${({ theme }) => theme.media.mobile.maxWidth}) {
     width: 80vw;
+
+    :hover {
+      opacity: 1;
+    }
   }
 `;
 

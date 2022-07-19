@@ -29,17 +29,8 @@ export const ShoppingCartModalStyle = styled.div<IShoppingCartModalStyle>`
   }
 
   @media (max-width: ${({ theme }) => theme.media.mobile.maxWidth}) {
-    padding: 0;
-    margin: 0;
-
-    position: relative;
-
-    width: 95vw;
-
-    margin-left: -90vw;
-    /* top: 70px;
-    right: -160%;
-    width: 95vw; */
+    right: -140%;
+    width: 90vw;
 
     transition: right 0.5s;
   }

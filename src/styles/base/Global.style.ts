@@ -7,4 +7,12 @@ export const GlobalStyle = createGlobalStyle`
         margin: 0px;
         font-family: ${({ theme }) => theme.font.fontFamily};
     }
+
+  a {
+  -webkit-tap-highlight-color: transparent;
+  }
+
+  button {
+  -webkit-tap-highlight-color: transparent;
+  }
 `;
