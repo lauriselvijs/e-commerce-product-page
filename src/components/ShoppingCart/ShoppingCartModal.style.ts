@@ -6,6 +6,7 @@ export const ShoppingCartModalStyle = styled.div<IShoppingCartModalStyle>`
   position: absolute;
   top: 60px;
   right: -400%;
+  z-index: 1;
 
   border-radius: 10px;
   box-shadow: 0px 18px 20px 0px ${({ theme }) => theme.colors.secondaryColor};
@@ -49,39 +50,6 @@ export const ShoppingCartModalTitleStyle = styled.div`
   border-bottom: 3px solid ${({ theme }) => theme.colors.secondaryColorLight};
 `;
 
-export const ShoppingCartModalContentsStyle = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 20px;
-`;
-
-export const ShoppingCartModalProductInfoStyle = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-`;
-export const ShoppingCartModalProductNameStyle = styled.div``;
-export const ShoppingCartModalProductPriceInfoStyle = styled.div``;
-export const ShoppingCartModalProductPriceInfoIndentStyle = styled.span`
-  color: ${({ theme }) => theme.colors.secondaryColorVeryDark};
-  font-weight: ${({ theme }) => theme.font.fontWeight.fontWeightBold};
-`;
-
-export const ShoppingCartModalProductImageStyle = styled.img`
-  border-radius: 5px;
-`;
-export const ShoppingCartModalProductDeleteBtnStyle = styled.button`
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
-`;
-export const ShoppingCartModalProductDeleteBtnImgStyle = styled.img`
-  :hover {
-    filter: contrast(0%);
-  }
-`;
-
 export const ShoppingCartModalFooterStyle = styled.div`
   display: flex;
   justify-content: center;
@@ -94,4 +62,11 @@ export const ShoppingCartModalFooterStyle = styled.div`
 
 export const ShoppingCartModalCheckoutLinkStyle = styled.a`
   text-decoration: none;
+`;
+
+export const ShoppingCartModalEmptyStyle = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 50px;
 `;

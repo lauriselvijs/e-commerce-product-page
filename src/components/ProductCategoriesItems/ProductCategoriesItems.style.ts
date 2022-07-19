@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const ProductCategoriesItemStyle = styled.a`
-  // FIXME: desktop size applied if resize from mobile to desktop
   cursor: pointer;
   color: ${({ theme }) => theme.colors.secondaryColorDark};
   padding-bottom: 50px;

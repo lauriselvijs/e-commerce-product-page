@@ -21,48 +21,29 @@ import PlusIcon from "../../asset/images/icons/icon-plus.svg";
 import MinusIcon from "../../asset/images/icons/icon-minus.svg";
 import { bindActionCreators } from "@reduxjs/toolkit";
 import { useAppDispatch, useAppSelector } from "../../hooks/Store.hook";
-import { ProductActions } from "../../store/features/Product/Product.slice";
 import { CartActions, CartName } from "../../store/features/Cart/Cart.slice";
 import { RootState } from "../../store/app/store";
-
-import FirstProductImage from "../../asset/images/image-product-1.jpg";
-import SecondProductImage from "../../asset/images/image-product-2.jpg";
-import ThirdProductImage from "../../asset/images/image-product-3.jpg";
-import FourthProductImage from "../../asset/images/image-product-4.jpg";
-
-import FirstProductImageThumbnail from "../../asset/images/image-product-1-thumbnail.jpg";
-import SecondProductImageThumbnail from "../../asset/images/image-product-2-thumbnail.jpg";
-import ThirdProductImageThumbnail from "../../asset/images/image-product-3-thumbnail.jpg";
-import FourthProductImageThumbnail from "../../asset/images/image-product-4-thumbnail.jpg";
-
-const SHOES = {
-  product_id: "shoes",
-  product_company: "SNEAKER COMPANY",
-  product_name: "Fall Limited Edition Sneakers",
-  product_desc: `These low-profile sneakers are your perfect casual wear companion.
-  Featuring a durable rubber outer sole, they'll withstand everything
-  the weather can offer.`,
-  product_price: 250.0,
-  product_currency: "$",
-  product_disc: 0.5,
-  product_price_with_disc: 125.0,
-  product_qty: 10,
-  product_gallery: [
-    { image: FirstProductImage, thumbnail: FirstProductImageThumbnail },
-    { image: SecondProductImage, thumbnail: SecondProductImageThumbnail },
-    { image: ThirdProductImage, thumbnail: ThirdProductImageThumbnail },
-    { image: FourthProductImage, thumbnail: FourthProductImageThumbnail },
-  ],
-  product_attr: null,
-};
+import { SHOES } from "../../constants/Products.const";
+import { currencyFormat } from "../../utils/Currency.uti";
+import { decToPercentString } from "../../utils/Convert.util";
+import { ADD_TO_CART_BTN_NAME } from "../../constants/Button.const";
 
 const ProductPageProductDesc = () => {
+  const {
+    product_company,
+    product_name,
+    product_desc,
+    product_price,
+    product_currency,
+    product_disc,
+    product_price_with_disc,
+  } = SHOES;
   const appDispatch = useAppDispatch();
   const { incProductQtyToCart, decProductQtyToCart } = bindActionCreators(
     CartActions,
     appDispatch
   );
-  const { addProductToCart } = bindActionCreators(ProductActions, appDispatch);
+  const { addProductToCart } = bindActionCreators(CartActions, appDispatch);
   const { productQtyToCart } = useAppSelector(
     (state: RootState) => state[CartName]
   );
@@ -76,34 +57,31 @@ const ProductPageProductDesc = () => {
   };
 
   const onProductPageAddToCartBtnClick = () => {
-    SHOES["product_qty"] = productQtyToCart;
-    addProductToCart(SHOES);
+    addProductToCart({ ...SHOES, product_qty: productQtyToCart });
   };
 
   return (
     <ProductPageProductDescStyle>
       <ProductPageProductCompanyStyle>
-        {SHOES.product_company}
+        {product_company}
       </ProductPageProductCompanyStyle>
       <ProductPageMainInfoSectionStyle>
         <ProductPageProductNameStyle>
-          {SHOES.product_name}
+          {product_name}
         </ProductPageProductNameStyle>
         <ProductPageProductInfoStyle>
-          {SHOES.product_desc}
+          {product_desc}
         </ProductPageProductInfoStyle>
       </ProductPageMainInfoSectionStyle>
       <ProductPageProductPriceContainerStyle>
         <ProductPageProductDiscPriceStyle>
-          {/* FIXME: need correct formatting for numbers */}
-          {SHOES.product_currency}
-          {SHOES.product_price_with_disc}
+          {currencyFormat(product_currency, product_price_with_disc)}
           <ProductPageProductPriceDiscPercentageBadgeStyle>
-            {SHOES.product_disc * 100}%
+            {decToPercentString(product_disc)}
           </ProductPageProductPriceDiscPercentageBadgeStyle>
         </ProductPageProductDiscPriceStyle>
         <ProductPageProductRealPriceStyle>
-          {SHOES.product_price}
+          {currencyFormat(product_currency, product_price)}
         </ProductPageProductRealPriceStyle>
       </ProductPageProductPriceContainerStyle>
       <ProductPageProductDescFooterStyle>
@@ -141,7 +119,7 @@ const ProductPageProductDesc = () => {
               fillRule="nonzero"
             />
           </svg>
-          Add to cart
+          {ADD_TO_CART_BTN_NAME}
         </ProductPageAddToCartBtnStyle>
       </ProductPageProductDescFooterStyle>
     </ProductPageProductDescStyle>

@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import { useAppSelector } from "../../hooks/Store.hook";
+import { RootState } from "../../store/app/store";
+import { CartName } from "../../store/features/Cart/Cart.slice";
 import ShoppingCartModal from "../ShoppingCart";
 import {
   ShoppingCartBtnContainerStyle,
@@ -7,6 +10,7 @@ import {
 } from "./ShoppingCartBtn.style";
 
 const ShoppingCartBtn = () => {
+  const { cart } = useAppSelector((state: RootState) => state[CartName]);
   const [showCart, setShowCart] = useState<boolean>(false);
 
   const onShoppingCartContainerMouseEnter = () => {
@@ -38,7 +42,9 @@ const ShoppingCartBtn = () => {
             fillRule="nonzero"
           />
         </svg>
-        <ShoppingCartBtnItemAmountStyle>3</ShoppingCartBtnItemAmountStyle>
+        <ShoppingCartBtnItemAmountStyle>
+          {cart.length}
+        </ShoppingCartBtnItemAmountStyle>
       </ShoppingCartBtnStyle>
       <ShoppingCartModal showCart={showCart} />
     </ShoppingCartBtnContainerStyle>

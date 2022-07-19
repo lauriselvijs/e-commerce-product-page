@@ -1,7 +1,5 @@
 import styled from "styled-components/macro";
 
-// TODO:
-// [] - Replace with ul and add li around a tags
 export const ProductCategoriesStyle = styled.div`
   display: flex;
   flex-direction: row;

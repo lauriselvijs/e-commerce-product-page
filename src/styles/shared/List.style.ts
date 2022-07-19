@@ -1,8 +1,6 @@
 import styled from "styled-components/macro";
 import { IListStyle } from "../../types/List.style.d";
 
-// TODO:
-// [] - Replace with ul and add li around a tags
 export const ProductCategoriesItemsStyle = styled.div<IListStyle>`
   display: flex;
   align-items: flex-start;
