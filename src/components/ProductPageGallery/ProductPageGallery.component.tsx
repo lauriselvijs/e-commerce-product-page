@@ -41,7 +41,7 @@ const ProductPageGallery = () => {
   return (
     <ProductPageGalleryStyle>
       {showArrowBtn && (
-        <ProductPageGalleryLeftArrowBtn top={"45%"} left={"5%"} />
+        <ProductPageGalleryLeftArrowBtn top={"45%"} left={"3%"} />
       )}
       <ProductPageGalleryImgStyle
         onClick={onProductPageGalleryImgClick}
@@ -51,7 +51,7 @@ const ProductPageGallery = () => {
         alt="Product"
       />
       {showArrowBtn && (
-        <ProductPageGalleryRightArrowBtn top={"45%"} left={"85%"} />
+        <ProductPageGalleryRightArrowBtn top={"45%"} left={"87%"} />
       )}
       <ProductPageGalleryFooterStyle>
         <ProductThumbnailGallery />
