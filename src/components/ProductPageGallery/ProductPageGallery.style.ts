@@ -15,3 +15,13 @@ export const ProductPageGalleryStyle = styled.div`
     padding: 0px;
   }
 `;
+
+export const ProductPageGalleryImgContainerStyle = styled.div`
+  margin: 0;
+  padding: 0;
+
+  @media (max-width: ${({ theme }) => theme.media.mobile.maxWidth}) {
+    width: 108%;
+    height: 396px;
+  }
+`;

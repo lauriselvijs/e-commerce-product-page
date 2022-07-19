@@ -4,7 +4,10 @@ import {
   ProductPageGalleryFooterStyle,
   ProductPageGalleryImgStyle,
 } from "../../styles/shared/Gallery.style";
-import { ProductPageGalleryStyle } from "./ProductPageGallery.style";
+import {
+  ProductPageGalleryImgContainerStyle,
+  ProductPageGalleryStyle,
+} from "./ProductPageGallery.style";
 import ProductPageGalleryRightArrowBtn from "../ProductPageGalleryRightArrowBtn";
 import ProductPageGalleryLeftArrowBtn from "../ProductPageGalleryLeftArrowBtn";
 import { useDetectMobileScreen } from "../../hooks/Screen.hook";
@@ -43,6 +46,7 @@ const ProductPageGallery = () => {
       {showArrowBtn && (
         <ProductPageGalleryLeftArrowBtn top={"45%"} left={"3%"} />
       )}
+      {/* <ProductPageGalleryImgContainerStyle> */}
       <ProductPageGalleryImgStyle
         onClick={onProductPageGalleryImgClick}
         width={396}
@@ -50,6 +54,7 @@ const ProductPageGallery = () => {
         src={currentImg}
         alt="Product"
       />
+      {/* </ProductPageGalleryImgContainerStyle> */}
       {showArrowBtn && (
         <ProductPageGalleryRightArrowBtn top={"45%"} left={"87%"} />
       )}
