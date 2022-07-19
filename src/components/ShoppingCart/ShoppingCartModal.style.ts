@@ -29,9 +29,17 @@ export const ShoppingCartModalStyle = styled.div<IShoppingCartModalStyle>`
   }
 
   @media (max-width: ${({ theme }) => theme.media.mobile.maxWidth}) {
-    top: 70px;
-    right: -225%;
+    padding: 0;
+    margin: 0;
+
+    position: relative;
+
     width: 95vw;
+
+    margin-left: -90vw;
+    /* top: 70px;
+    right: -160%;
+    width: 95vw; */
 
     transition: right 0.5s;
   }
@@ -69,4 +77,9 @@ export const ShoppingCartModalEmptyStyle = styled.div`
   justify-content: center;
   align-items: center;
   padding: 100px 50px;
+
+  font-weight: ${({ theme }) => theme.font.fontWeight.fontWeightBold};
+  font-size: ${({ theme }) => theme.typography.fontSize.fontSizeMedium};
+
+  color: ${({ theme }) => theme.colors.secondaryColorDark};
 `;

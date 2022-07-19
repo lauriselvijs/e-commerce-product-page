@@ -1,6 +1,17 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Navigate,
+  Route,
+  Routes,
+} from "react-router-dom";
 import { ThemeProvider } from "styled-components";
+import { SHOES } from "../../constants/Products.const";
+import {
+  HOME_URL,
+  NOT_FOUND_URL,
+  PRODUCT_PAGE_URL,
+} from "../../constants/Url.const";
 import { useAppSelector } from "../../hooks/Store.hook";
 import { useSetTheme } from "../../hooks/Theme.hook";
 import NotFound from "../../pages/NotFound";
@@ -11,6 +22,7 @@ import { ThemeName } from "../../store/features/Theme/Theme.slice";
 import { GlobalStyle } from "../../styles/base/Global.style";
 import LightTheme from "../../styles/theme/LightTheme";
 import FontProvider from "../FontProvider";
+import Footer from "../Footer";
 
 const App = () => {
   useSetTheme(LightTheme);
@@ -25,12 +37,21 @@ const App = () => {
         <GlobalStyle />
         <Router>
           <Routes>
-            {/* path={"/product-page"} */}
-            <Route path={"/"} element={<Layout />}>
-              <Route path={"/"} element={<ProductPage />} />
+            <Route path={HOME_URL} element={<Layout />}>
+              <Route
+                index
+                element={
+                  <Navigate to={`${PRODUCT_PAGE_URL}/:${SHOES.product_id}`} />
+                }
+              />
+              <Route
+                path={`${PRODUCT_PAGE_URL}/:${SHOES.product_id}`}
+                element={<ProductPage />}
+              />
             </Route>
-            <Route path={"*"} element={<NotFound />} />
+            <Route path={NOT_FOUND_URL} element={<NotFound />} />
           </Routes>
+          <Footer />
         </Router>
       </ThemeProvider>
     </FontProvider>

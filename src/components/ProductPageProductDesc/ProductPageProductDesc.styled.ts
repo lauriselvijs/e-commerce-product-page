@@ -3,6 +3,10 @@ import {
   PrimaryBtnStyle,
   QuantityBtnStyle,
 } from "../../styles/shared/Button.style";
+import {
+  ParagraphStyle,
+  PrimaryTextStyle,
+} from "../../styles/shared/Text.style";
 
 export const ProductPageProductDescStyle = styled.div`
   display: flex;
@@ -40,19 +44,13 @@ export const ProductPageProductCompanyStyle = styled.div`
 
 export const ProductPageMainInfoSectionStyle = styled.section``;
 
-export const ProductPageProductNameStyle = styled.h1`
-  font-weight: ${({ theme }) => theme.font.fontWeight.fontWeightBold};
-  font-size: ${({ theme }) => theme.typography.fontSize.fontSizeLarge};
-
-  color: ${({ theme }) => theme.colors.secondaryColorVeryDark};
-
+export const ProductPageProductNameStyle = styled(PrimaryTextStyle)`
   @media (max-width: ${({ theme }) => theme.media.mobile.maxWidth}) {
     margin-top: 10px;
   }
 `;
-export const ProductPageProductInfoStyle = styled.p`
+export const ProductPageProductInfoStyle = styled(ParagraphStyle)`
   font-weight: ${({ theme }) => theme.font.fontWeight.fontWeightMedium};
-  font-size: ${({ theme }) => theme.typography.fontSize.fontSizeMedium};
 
   color: ${({ theme }) => theme.colors.secondaryColorDark};
 `;
@@ -84,6 +82,8 @@ export const ProductPageProductDiscPriceStyle = styled.div`
   color: ${({ theme }) => theme.colors.secondaryColorVeryDark};
 `;
 export const ProductPageProductPriceDiscPercentageBadgeStyle = styled.div`
+  padding: 0;
+  margin: 0;
   text-align: center;
   vertical-align: center;
 
@@ -174,14 +174,20 @@ export const ProductPageQuantityDecBtnStyle = styled(QuantityBtnStyle)`
 
     transition: left 0.5s;
   }
+
+  :hover {
+    opacity: 0.6;
+  }
 `;
 export const ProductPageQuantityIncBtnStyle = styled(QuantityBtnStyle)`
   top: 0px;
   left: 0px;
+
+  :hover {
+    opacity: 0.6;
+  }
 `;
 
-// TODO:
-// []  - change to svg and target svg icon opacity on hover inside wrapper button
 export const ProductPageQuantityIncIconStyle = styled.img``;
 export const ProductPageQuantityDecIconStyle = styled.img``;
 export const ProductPageAddToCartBtnStyle = styled(PrimaryBtnStyle)`

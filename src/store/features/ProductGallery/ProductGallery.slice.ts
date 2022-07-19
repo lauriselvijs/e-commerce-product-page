@@ -7,8 +7,6 @@ export const ProductGallery = createSlice({
   name: PRODUCT_GALLERY_SLICE_NAME,
   initialState,
   reducers: {
-    // TODO:
-    // [] - replace with util function prev/next img
     prevImg: (state, action: PayloadAction<IProductGallery["gallery"]>) => {
       for (let index = 0; index < action.payload.length; index++) {
         if (action.payload[index].image === state.currentImg && index >= 1) {
