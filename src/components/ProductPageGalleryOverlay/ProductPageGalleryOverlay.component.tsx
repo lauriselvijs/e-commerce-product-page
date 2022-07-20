@@ -63,7 +63,7 @@ const ProductPageGalleryOverlay = () => {
         </ProductPageGalleryImgContainerStyle>
 
         <ProductPageGalleryFooterStyle
-          width={"80%"}
+          galleryFooterWidth={"80%"}
           justifyContent={"space-around"}
         >
           <ProductThumbnailGallery />

@@ -1,4 +1,4 @@
 export interface IProductPageGalleryFooterStyle {
-  width?: string;
+  galleryFooterWidth?: string;
   justifyContent?: string;
 }

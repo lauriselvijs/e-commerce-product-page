@@ -22,7 +22,7 @@ export const ProductPageGalleryFooterStyle = styled.div<IProductPageGalleryFoote
 
   padding-top: 20px;
 
-  width: ${({ width }) => (width ? width : "100%")};
+  width: ${({ galleryFooterWidth }) => (galleryFooterWidth ? galleryFooterWidth : "100%")};
 
   @media (max-width: ${({ theme }) => theme.media.mobile.maxWidth}) {
     display: none;

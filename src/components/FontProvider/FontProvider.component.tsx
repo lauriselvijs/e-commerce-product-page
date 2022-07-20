@@ -18,9 +18,10 @@ const FontProvider = ({
           crossOrigin=""
         />
         <link
-          href={`https://fonts.googleapis.com/css2?family=${fontFamilyName}:wght@${fontWeightObjToString(
-            fontWeight
-          )}&display=swap`}
+          href={`https://fonts.googleapis.com/css2?family=${fontFamilyName.replace(
+            /\s/g,
+            "+"
+          )}:wght@${fontWeightObjToString(fontWeight)}&display=swap`}
           rel="stylesheet"
         />
       </Helmet>
