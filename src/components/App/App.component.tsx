@@ -11,6 +11,7 @@ import {
   HOME_URL,
   NOT_FOUND_URL,
   PRODUCT_PAGE_URL,
+  PRODUCT_PAGE_URL_PARAM,
 } from "../../constants/Url.const";
 import { useAppSelector } from "../../hooks/Store.hook";
 import { useSetTheme } from "../../hooks/Theme.hook";
@@ -41,11 +42,11 @@ const App = () => {
               <Route
                 index
                 element={
-                  <Navigate to={`${PRODUCT_PAGE_URL}/:${SHOES.product_id}`} />
+                  <Navigate to={`${PRODUCT_PAGE_URL}/${SHOES.product_id}`} />
                 }
               />
               <Route
-                path={`${PRODUCT_PAGE_URL}/:${SHOES.product_id}`}
+                path={`${PRODUCT_PAGE_URL}/${PRODUCT_PAGE_URL_PARAM}`}
                 element={<ProductPage />}
               />
             </Route>

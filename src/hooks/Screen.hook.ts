@@ -11,7 +11,7 @@ export const useDetectMobileScreen = (): boolean => {
     },
   } = theme;
   const [width, setWidth] = useState<number>(0);
-  const [isMobile, setIsMobile] = useState<boolean>(true);
+  const [isMobile, setIsMobile] = useState<boolean>(false);
 
   useEffect(() => {
     const handleResize = () => {
