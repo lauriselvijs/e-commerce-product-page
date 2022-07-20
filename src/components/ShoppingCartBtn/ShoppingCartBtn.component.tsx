@@ -42,9 +42,11 @@ const ShoppingCartBtn = () => {
             fillRule="nonzero"
           />
         </svg>
-        <ShoppingCartBtnItemAmountStyle>
-          {cart.length}
-        </ShoppingCartBtnItemAmountStyle>
+        {cart.length !== 0 && (
+          <ShoppingCartBtnItemAmountStyle>
+            {cart.length}
+          </ShoppingCartBtnItemAmountStyle>
+        )}
       </ShoppingCartBtnStyle>
       <ShoppingCartModal showCart={showCart} />
     </ShoppingCartBtnContainerStyle>
