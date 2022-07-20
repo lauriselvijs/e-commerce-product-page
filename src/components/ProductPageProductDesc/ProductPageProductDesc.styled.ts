@@ -53,6 +53,8 @@ export const ProductPageProductInfoStyle = styled(ParagraphStyle)`
   font-weight: ${({ theme }) => theme.font.fontWeight.fontWeightMedium};
 
   color: ${({ theme }) => theme.colors.secondaryColorDark};
+
+  padding-bottom: 10px;
 `;
 
 export const ProductPageProductPriceContainerStyle = styled.div`
