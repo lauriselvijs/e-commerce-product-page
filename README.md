@@ -32,10 +32,10 @@ Users should be able to:
 
 ### Screenshot
 
-![E-commerce product page desktop](https://user-images.githubusercontent.com/85683069/179801335-51169317-0aa0-4aa3-9c56-429a58c2137c.png)
-![E-commerce product page desktop cart full](https://user-images.githubusercontent.com/85683069/179801341-94359bd7-ee2a-4d47-b383-d496ec77a32a.png)
-![E-commerce product page desktop cart empty](https://user-images.githubusercontent.com/85683069/179801345-536c689d-e591-4921-aa84-8db45257d558.png)
-![E-commerce product page desktop gallery overlay](https://user-images.githubusercontent.com/85683069/179801326-2e3193f5-9fae-479d-bad6-a7e045980704.png)
+![E-commerce product page desktop](https://user-images.githubusercontent.com/85683069/190152987-7ffc90c0-44f9-443d-b878-0af177260d73.png)
+![E-commerce product page desktop cart full](https://user-images.githubusercontent.com/85683069/190153002-5fd22439-0757-446b-aaac-22ccb2f1b505.png)
+![E-commerce product page desktop cart empty](https://user-images.githubusercontent.com/85683069/190152996-3a089f5a-698b-4303-839f-c88361f03d78.png)
+![E-commerce product page desktop gallery overlay](https://user-images.githubusercontent.com/85683069/190153008-34d0c8a8-8ed3-4a5e-89ba-0e7975621c2f.png)
 ![E-commerce product page mobile menu](https://user-images.githubusercontent.com/85683069/179802965-8b2abbf3-22aa-462c-baef-8381ca1cbaf6.png)
 ![E-commerce product page mobile cart full](https://user-images.githubusercontent.com/85683069/179801348-f516e391-4718-4349-af6f-91b6daebf4b6.png)
 ![E-commerce product page mobile cart empty](https://user-images.githubusercontent.com/85683069/179801350-23e7f409-6bd3-4848-b1a3-4a689d2a16f8.png)
