@@ -5,9 +5,9 @@ export const PageStyle = styled.main`
   justify-content: space-between;
   align-items: flex-start;
 
-  padding-left: 320px;
-  padding-right: 320px;
-  padding-top: 80px;
+  padding-left: 20%;
+  padding-right: 20%;
+  padding-top: 5%;
 
   transition: padding-left 0.5s;
 

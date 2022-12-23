@@ -6,7 +6,7 @@ export const colors = {
   secondaryColorLight: "hsl(223, 64%, 98%)",
   secondaryColorDark: "hsl(219, 9%, 45%)",
   secondaryColorVeryDark: "hsl(220, 13%, 13%)",
-  overlayColor: "hsla(0, 0%, 0%, 0.8)",
+  overlay: "hsla(0, 0%, 0%, 0.2)",
   white: "hsl(360, 100%, 100%)",
   black: "hsl(0, 0%, 0%)",
 };

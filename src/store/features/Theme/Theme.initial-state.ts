@@ -25,7 +25,7 @@ const initialState: DefaultTheme = {
     secondaryColorLight: "",
     secondaryColorDark: "",
     secondaryColorVeryDark: "",
-    overlayColor: "",
+    overlay: "",
     white: "",
     black: "",
   },

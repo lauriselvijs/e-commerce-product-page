@@ -15,5 +15,5 @@ export const OverlayStyle = styled.div<IOverlayStyle>`
   height: 100%;
   overflow: auto;
 
-  background-color: ${({ theme }) => theme.colors.overlayColor};
+  background-color: ${({ theme }) => theme.colors.overlay};
 `;
