@@ -18,21 +18,15 @@ import {
   ProductGalleryActions,
   ProductGalleryName,
 } from "../../store/features/ProductGallery/ProductGallery.slice";
-import { MouseEventHandler, useRef } from "react";
+import { MouseEvent, useRef } from "react";
 
 const ProductPageGalleryOverlay = () => {
   const modalRef = useRef<HTMLDivElement | null>(null);
 
-  const handleClickOutsideGallery = (
-    event: MouseEventHandler<HTMLDivElement>
-  ) => {
-    // if (
-    //   modalRef.current &&
-    //   !modalRef.current.contains(event.target)
-    // ) {
-    //   closeGalleryOverlay();
-    // }
-    console.log(event);
+  const handleClickOutsideGallery = (event: MouseEvent<HTMLDivElement>) => {
+    if (modalRef.current && !modalRef.current.contains(event.target as Node)) {
+      closeGalleryOverlay();
+    }
   };
 
   const { showGalleryOverlay, currentImg } = useAppSelector(
