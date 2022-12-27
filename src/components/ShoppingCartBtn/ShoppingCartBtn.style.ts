@@ -23,7 +23,7 @@ export const ShoppingCartBtnStyle = styled.button<IShoppingCartModalStyle>`
     showCart &&
     css`
       path {
-        fill: ${({ theme }) => theme.colors.secondaryColorVeryDark};
+        fill: ${({ theme }) => theme.color.secondaryVeryDark};
       }
     `}
 `;
@@ -33,8 +33,8 @@ export const ShoppingCartBtnItemAmountStyle = styled.div`
   justify-content: center;
   align-items: center;
 
-  font-weight: ${({ theme }) => theme.font.fontWeight.fontWeightBold};
-  font-size: ${({ theme }) => theme.typography.fontSize.fontSizeSmall};
+  font-weight: ${({ theme }) => theme.font.weight.bold};
+  font-size: ${({ theme }) => theme.font.size.small};
 
   position: absolute;
 
@@ -46,6 +46,6 @@ export const ShoppingCartBtnItemAmountStyle = styled.div`
   height: 12px;
   width: 20px;
 
-  color: ${({ theme }) => theme.colors.secondaryColorLight};
-  background-color: ${({ theme }) => theme.colors.primaryColor};
+  color: ${({ theme }) => theme.color.secondaryLight};
+  background-color: ${({ theme }) => theme.color.primary};
 `;

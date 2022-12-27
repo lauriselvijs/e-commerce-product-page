@@ -31,7 +31,7 @@ export const HamburgerMenuOverlayModalStyle = styled.div`
   justify-content: flex-start;
   align-items: flex-start;
 
-  background-color: ${({ theme }) => theme.colors.primaryColorVeryLight};
+  background-color: ${({ theme }) => theme.color.primaryVeryLight};
 
   // animation-duration: 200ms;
   // animation-name: slide-in;

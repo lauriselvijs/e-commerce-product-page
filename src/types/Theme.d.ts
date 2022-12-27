@@ -1,35 +1,38 @@
 import "styled-components";
 
+interface Color {
+  primary: string;
+  primaryLight: string;
+  primaryVeryLight: string;
+  secondary: string;
+  secondaryLight: string;
+  secondaryDark: string;
+  secondaryVeryDark: string;
+  overlay: string;
+  white: string;
+  black: string;
+}
+
 declare module "styled-components" {
   export interface DefaultTheme {
-    themeId: string;
     font: {
-      fontFamilyName: string;
-      fontFamily: string;
-      fontWeight: {
-        fontWeightMedium: string;
-        fontWeightBold: string;
+      familyName: string;
+      family: string;
+      weight: {
+        medium: string;
+        bold: string;
+      };
+      size: {
+        large: string;
+        medium: string;
+        small: string;
       };
     };
-    typography: {
-      fontSize: {
-        fontSizeLarge: string;
-        fontSizeMedium: string;
-        fontSizeSmall: string;
-      };
-    };
-    colors: {
-      primaryColor: string;
-      primaryColorLight: string;
-      primaryColorVeryLight: string;
-      secondaryColor: string;
-      secondaryColorLight: string;
-      secondaryColorDark: string;
-      secondaryColorVeryDark: string;
-      overlay: string;
-      white: string;
-      black: string;
-    };
+    color: Color;
+    theme: {
+      id: string;
+      color: Partial<Color>;
+    }[];
     media: {
       mobile: {
         maxWidth: string;

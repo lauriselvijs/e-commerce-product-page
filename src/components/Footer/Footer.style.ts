@@ -8,7 +8,7 @@ export const FooterStyle = styled.footer`
   height: 20px;
   padding-bottom: 10px;
   z-index: -1;
-  font-size: ${({ theme }) => theme.typography.fontSize.fontSizeSmall};
+  font-size: ${({ theme }) => theme.font.size.small};
   text-align: center;
 
   @media (max-width: ${({ theme }) => theme.media.tablet.maxWidth}) {

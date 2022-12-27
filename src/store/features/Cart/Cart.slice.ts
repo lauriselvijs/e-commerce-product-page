@@ -28,7 +28,6 @@ export const Cart = createSlice({
         ) &&
         state.productQtyToCart > 0
       ) {
-        console.log("has product in cart");
         state.cart = state.cart.map((product) => {
           if (product.product_id === action.payload.product_id) {
             return {

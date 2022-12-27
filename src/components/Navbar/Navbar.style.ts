@@ -12,7 +12,7 @@ export const NavbarStyle = styled.nav`
 
   gap: 40px;
 
-  border-bottom: 3px solid ${({ theme }) => theme.colors.secondaryColorLight};
+  border-bottom: 3px solid ${({ theme }) => theme.color.secondaryLight};
 
   transition: margin-left 0.5s;
 

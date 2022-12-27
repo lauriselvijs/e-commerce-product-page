@@ -36,10 +36,10 @@ export const ProductPageProductDescStyle = styled.div`
 export const ProductPageProductCompanyStyle = styled.div`
   text-transform: uppercase;
 
-  font-weight: ${({ theme }) => theme.font.fontWeight.fontWeightBold};
-  font-size: ${({ theme }) => theme.typography.fontSize.fontSizeMedium};
+  font-weight: ${({ theme }) => theme.font.weight.bold};
+  font-size: ${({ theme }) => theme.font.size.medium};
 
-  color: ${({ theme }) => theme.colors.primaryColor};
+  color: ${({ theme }) => theme.color.primary};
 `;
 
 export const ProductPageMainInfoSectionStyle = styled.section``;
@@ -50,9 +50,9 @@ export const ProductPageProductNameStyle = styled(PrimaryTextStyle)`
   }
 `;
 export const ProductPageProductInfoStyle = styled(ParagraphStyle)`
-  font-weight: ${({ theme }) => theme.font.fontWeight.fontWeightMedium};
+  font-weight: ${({ theme }) => theme.font.weight.medium};
 
-  color: ${({ theme }) => theme.colors.secondaryColorDark};
+  color: ${({ theme }) => theme.color.secondaryDark};
 
   padding-bottom: 10px;
 `;
@@ -78,10 +78,10 @@ export const ProductPageProductDiscPriceStyle = styled.div`
   align-items: center;
   gap: 20px;
 
-  font-weight: ${({ theme }) => theme.font.fontWeight.fontWeightBold};
-  font-size: ${({ theme }) => theme.typography.fontSize.fontSizeLarge};
+  font-weight: ${({ theme }) => theme.font.weight.bold};
+  font-size: ${({ theme }) => theme.font.size.large};
 
-  color: ${({ theme }) => theme.colors.secondaryColorVeryDark};
+  color: ${({ theme }) => theme.color.secondaryVeryDark};
 `;
 export const ProductPageProductPriceDiscPercentageBadgeStyle = styled.div`
   padding: 0;
@@ -89,20 +89,20 @@ export const ProductPageProductPriceDiscPercentageBadgeStyle = styled.div`
   text-align: center;
   vertical-align: center;
 
-  font-weight: ${({ theme }) => theme.font.fontWeight.fontWeightBold};
-  font-size: ${({ theme }) => theme.typography.fontSize.fontSizeMedium};
+  font-weight: ${({ theme }) => theme.font.weight.bold};
+  font-size: ${({ theme }) => theme.font.size.medium};
 
-  color: ${({ theme }) => theme.colors.primaryColor};
-  background-color: ${({ theme }) => theme.colors.primaryColorLight};
+  color: ${({ theme }) => theme.color.primary};
+  background-color: ${({ theme }) => theme.color.primaryLight};
   width: fit-content;
   padding: 1px 8px;
   border-radius: 8px;
 `;
 export const ProductPageProductRealPriceStyle = styled.div`
-  font-weight: ${({ theme }) => theme.font.fontWeight.fontWeightMedium};
-  font-size: ${({ theme }) => theme.typography.fontSize.fontSizeMedium};
+  font-weight: ${({ theme }) => theme.font.weight.medium};
+  font-size: ${({ theme }) => theme.font.size.medium};
 
-  color: ${({ theme }) => theme.colors.secondaryColor};
+  color: ${({ theme }) => theme.color.secondary};
   text-decoration: line-through;
 `;
 
@@ -140,11 +140,11 @@ export const ProductPageQuantityBtnContainerStyle = styled.div`
   height: 55px;
   width: 160px;
 
-  font-weight: ${({ theme }) => theme.font.fontWeight.fontWeightBold};
-  font-size: ${({ theme }) => theme.typography.fontSize.fontSizeMedium};
+  font-weight: ${({ theme }) => theme.font.weight.bold};
+  font-size: ${({ theme }) => theme.font.size.medium};
 
-  color: ${({ theme }) => theme.colors.secondaryColorVeryDark};
-  background-color: ${({ theme }) => theme.colors.secondaryColorLight};
+  color: ${({ theme }) => theme.color.secondaryVeryDark};
+  background-color: ${({ theme }) => theme.color.secondaryLight};
 
   transition: width 0.5s;
 
@@ -203,11 +203,11 @@ export const ProductPageAddToCartBtnStyle = styled(PrimaryBtnStyle)`
   svg {
     transform: scale(0.8);
     path {
-      fill: ${({ theme }) => theme.colors.primaryColorVeryLight};
+      fill: ${({ theme }) => theme.color.primaryVeryLight};
     }
   }
 
-  box-shadow: 0px 20px 20px 0px ${({ theme }) => theme.colors.primaryColorLight};
+  box-shadow: 0px 20px 20px 0px ${({ theme }) => theme.color.primaryLight};
 
   @media (max-width: ${({ theme }) => theme.media.mobile.maxWidth}) {
     width: 85vw;

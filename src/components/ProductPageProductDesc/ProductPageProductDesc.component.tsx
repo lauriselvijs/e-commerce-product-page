@@ -1,4 +1,3 @@
-import React from "react";
 import {
   ProductPageAddToCartBtnStyle,
   ProductPageMainInfoSectionStyle,
@@ -16,7 +15,7 @@ import {
   ProductPageQuantityIncIconStyle,
   ProductPageQuantityIncBtnStyle,
   ProductPageQuantityDecBtnStyle,
-} from "./ProductPageProductDesc.styled";
+} from "./ProductPageProductDesc.style";
 import PlusIcon from "../../asset/images/icons/icon-plus.svg";
 import MinusIcon from "../../asset/images/icons/icon-minus.svg";
 import { bindActionCreators } from "@reduxjs/toolkit";

@@ -6,11 +6,11 @@ export const ShoppingCartModalTitleStyle = styled.div`
   padding-bottom: 20px;
   padding-left: 20px;
 
-  font-weight: ${({ theme }) => theme.font.fontWeight.fontWeightBold};
+  font-weight: ${({ theme }) => theme.font.weight.bold};
 
-  color: ${({ theme }) => theme.colors.secondaryColorVeryDark};
+  color: ${({ theme }) => theme.color.secondaryVeryDark};
 
-  border-bottom: 3px solid ${({ theme }) => theme.colors.secondaryColorLight};
+  border-bottom: 3px solid ${({ theme }) => theme.color.secondaryLight};
 `;
 
 export const ShoppingCartModalContentsStyle = styled.div`
@@ -28,8 +28,8 @@ export const ShoppingCartModalProductInfoStyle = styled.div`
 export const ShoppingCartModalProductNameStyle = styled.div``;
 export const ShoppingCartModalProductPriceInfoStyle = styled.div``;
 export const ShoppingCartModalProductPriceInfoIndentStyle = styled.span`
-  color: ${({ theme }) => theme.colors.secondaryColorVeryDark};
-  font-weight: ${({ theme }) => theme.font.fontWeight.fontWeightBold};
+  color: ${({ theme }) => theme.color.secondaryVeryDark};
+  font-weight: ${({ theme }) => theme.font.weight.bold};
 `;
 
 export const ShoppingCartModalProductImageStyle = styled.img`

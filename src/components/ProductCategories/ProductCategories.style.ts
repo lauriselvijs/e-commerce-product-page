@@ -7,8 +7,8 @@ export const ProductCategoriesStyle = styled.div`
   flex: 1;
   gap: 30px;
 
-  font-weight: ${({ theme }) => theme.font.fontWeight.fontWeightMedium};
-  font-size: ${({ theme }) => theme.typography.fontSize.fontSizeMedium};
+  font-weight: ${({ theme }) => theme.font.weight.medium};
+  font-size: ${({ theme }) => theme.font.size.medium};
 
   @media (max-width: ${({ theme }) => theme.media.mobile.maxWidth}) {
     display: none;
@@ -47,14 +47,14 @@ export const HamburgerMenuIconStyle = styled.img`
 
 export const ProductCategoriesItemStyle = styled.a`
   cursor: pointer;
-  color: ${({ theme }) => theme.colors.secondaryColorDark};
+  color: ${({ theme }) => theme.color.secondaryDark};
   padding-bottom: 50px;
 
   text-decoration: none;
 
   :hover {
-    color: ${({ theme }) => theme.colors.secondaryColorVeryDark};
-    border-bottom: 5px solid ${({ theme }) => theme.colors.primaryColor};
+    color: ${({ theme }) => theme.color.secondaryVeryDark};
+    border-bottom: 5px solid ${({ theme }) => theme.color.primary};
     margin-bottom: -5px;
   }
 `;

@@ -9,16 +9,16 @@ export const ShoppingCartModalStyle = styled.div<IShoppingCartModalStyle>`
   z-index: 1;
 
   border-radius: 10px;
-  box-shadow: 0px 18px 20px 0px ${({ theme }) => theme.colors.secondaryColor};
+  box-shadow: 0px 18px 20px 0px ${({ theme }) => theme.color.secondary};
 
   width: 380px;
   height: auto;
 
-  font-size: ${({ theme }) => theme.typography.fontSize.fontSizeMedium};
-  font-weight: ${({ theme }) => theme.font.fontWeight.fontWeightMedium};
-  color: ${({ theme }) => theme.colors.secondaryColorDark};
+  font-size: ${({ theme }) => theme.font.size.medium};
+  font-weight: ${({ theme }) => theme.font.weight.medium};
+  color: ${({ theme }) => theme.color.secondaryDark};
 
-  background-color: ${({ theme }) => theme.colors.primaryColorVeryLight};
+  background-color: ${({ theme }) => theme.color.primaryVeryLight};
 
   transition: right 1s;
 
@@ -42,11 +42,11 @@ export const ShoppingCartModalTitleStyle = styled.div`
   padding-bottom: 20px;
   padding-left: 20px;
 
-  font-weight: ${({ theme }) => theme.font.fontWeight.fontWeightBold};
+  font-weight: ${({ theme }) => theme.font.weight.bold};
 
-  color: ${({ theme }) => theme.colors.secondaryColorVeryDark};
+  color: ${({ theme }) => theme.color.secondaryVeryDark};
 
-  border-bottom: 3px solid ${({ theme }) => theme.colors.secondaryColorLight};
+  border-bottom: 3px solid ${({ theme }) => theme.color.secondaryLight};
 `;
 
 export const ShoppingCartModalFooterStyle = styled.div`
@@ -69,8 +69,8 @@ export const ShoppingCartModalEmptyStyle = styled.div`
   align-items: center;
   padding: 100px 50px;
 
-  font-weight: ${({ theme }) => theme.font.fontWeight.fontWeightBold};
-  font-size: ${({ theme }) => theme.typography.fontSize.fontSizeMedium};
+  font-weight: ${({ theme }) => theme.font.weight.bold};
+  font-size: ${({ theme }) => theme.font.size.medium};
 
-  color: ${({ theme }) => theme.colors.secondaryColorDark};
+  color: ${({ theme }) => theme.color.secondaryDark};
 `;

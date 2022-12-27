@@ -9,19 +9,19 @@ export const NotFoundContainerStyle = styled.div`
 `;
 
 export const NotFoundTextStyle = styled.h1`
-  font-weight: ${({ theme }) => theme.font.fontWeight.fontWeightBold};
-  font-size: ${({ theme }) => theme.typography.fontSize.fontSizeLarge};
+  font-weight: ${({ theme }) => theme.font.weight.bold};
+  font-size: ${({ theme }) => theme.font.size.large};
   text-align: center;
 
-  color: ${({ theme }) => theme.colors.secondaryColorDark};
+  color: ${({ theme }) => theme.color.secondaryDark};
 `;
 
 export const NotFoundUrlStyle = styled.a`
   text-decoration: none;
 
-  color: ${({ theme }) => theme.colors.secondaryColor};
+  color: ${({ theme }) => theme.color.secondary};
 
   :hover {
-    color: ${({ theme }) => theme.colors.primaryColor};
+    color: ${({ theme }) => theme.color.primary};
   }
 `;

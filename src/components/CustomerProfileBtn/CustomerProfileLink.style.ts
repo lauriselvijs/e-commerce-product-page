@@ -22,7 +22,7 @@ export const CustomerProfileLinkStyle = styled.a`
   transition: width 0.5s, height 0.5s;
 
   :hover {
-    outline: 1px solid ${({ theme }) => theme.colors.primaryColor};
+    outline: 1px solid ${({ theme }) => theme.color.primary};
   }
 
   @media (max-width: ${({ theme }) => theme.media.mobile.maxWidth}) {

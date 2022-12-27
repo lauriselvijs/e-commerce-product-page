@@ -7,8 +7,8 @@ export const ProductCategoriesItemsStyle = styled.div<IListStyle>`
   flex: 1;
   gap: 30px;
 
-  font-weight: ${({ theme }) => theme.font.fontWeight.fontWeightMedium};
-  font-size: ${({ theme }) => theme.typography.fontSize.fontSizeMedium};
+  font-weight: ${({ theme }) => theme.font.weight.medium};
+  font-size: ${({ theme }) => theme.font.size.medium};
 
   @media (max-width: ${({ theme }) => theme.media.mobile.maxWidth}) {
     display: ${({ showOnMobile }) => (showOnMobile ? "flex" : "none")};

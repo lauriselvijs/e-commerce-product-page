@@ -3,7 +3,7 @@ import { IProductPageGalleryThumbnailStyle } from "./ProductThumbnailGallery.sty
 
 export const ProductPageGalleryThumbnailBtnStyle = styled.button<IProductPageGalleryThumbnailStyle>`
   cursor: pointer;
-  background-color: ${({ theme }) => theme.colors.primaryColorVeryLight};
+  background-color: ${({ theme }) => theme.color.primaryVeryLight};
 
   height: ${({ selected }) => (selected ? "64px" : "63px")};
   width: ${({ selected }) => (selected ? "64px" : "63px")};
@@ -12,7 +12,7 @@ export const ProductPageGalleryThumbnailBtnStyle = styled.button<IProductPageGal
   ${({ selected }) =>
     selected
       ? css`
-          border: 1px solid ${({ theme }) => theme.colors.primaryColor};
+          border: 1px solid ${({ theme }) => theme.color.primary};
         `
       : css`
           border: none;

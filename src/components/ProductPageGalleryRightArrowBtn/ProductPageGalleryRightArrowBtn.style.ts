@@ -6,7 +6,7 @@ export const ProductPageGalleryRightArrowBtnStyle = styled(SecondaryBtnStyle)`
   left: ${({ left }) => left};
 
   :hover path {
-    stroke: ${({ theme }) => theme.colors.primaryColor};
+    stroke: ${({ theme }) => theme.color.primary};
   }
 
   @media (max-width: ${({ theme }) => theme.media.tablet.maxWidth}) {

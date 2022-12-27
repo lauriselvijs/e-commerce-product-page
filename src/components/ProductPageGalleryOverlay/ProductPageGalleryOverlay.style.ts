@@ -32,10 +32,10 @@ export const ProductPageGalleryOverlayModalCloseBtnStyle = styled.button`
   cursor: pointer;
 
   path {
-    fill: ${({ theme }) => theme.colors.primaryColorVeryLight};
+    fill: ${({ theme }) => theme.color.primaryVeryLight};
   }
 
   :hover path {
-    fill: ${({ theme }) => theme.colors.primaryColor};
+    fill: ${({ theme }) => theme.color.primary};
   }
 `;

@@ -5,11 +5,11 @@ export const PrimaryBtnStyle = styled.button`
   height: 55px;
   width: 340px;
 
-  color: ${({ theme }) => theme.colors.secondaryColorLight};
-  background-color: ${({ theme }) => theme.colors.primaryColor};
+  color: ${({ theme }) => theme.color.secondaryLight};
+  background-color: ${({ theme }) => theme.color.primary};
 
-  font-weight: ${({ theme }) => theme.font.fontWeight.fontWeightBold};
-  font-size: ${({ theme }) => theme.typography.fontSize.fontSizeSmall};
+  font-weight: ${({ theme }) => theme.font.weight.bold};
+  font-size: ${({ theme }) => theme.font.size.small};
 
   border: none;
   border-radius: 10px;
