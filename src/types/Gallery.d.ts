@@ -1,4 +1,4 @@
-export interface IGallery {
+export interface Gallery {
   image: string;
   thumbnail: string;
 }

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import ProductThumbnailGallery from "../ProductThumbnailGallery";
 import {
   ProductPageGalleryFooterStyle,
@@ -43,9 +43,7 @@ const ProductPageGallery = () => {
 
   return (
     <ProductPageGalleryStyle>
-      {showArrowBtn && (
-        <ProductPageGalleryLeftArrowBtn top={"45%"} left={"3%"} />
-      )}
+      {showArrowBtn && <ProductPageGalleryLeftArrowBtn />}
       <ProductPageGalleryImgContainerStyle>
         <ProductPageGalleryImgStyle
           onClick={onProductPageGalleryImgClick}
@@ -55,9 +53,7 @@ const ProductPageGallery = () => {
           alt="Product"
         />
       </ProductPageGalleryImgContainerStyle>
-      {showArrowBtn && (
-        <ProductPageGalleryRightArrowBtn top={"45%"} left={"86%"} />
-      )}
+      {showArrowBtn && <ProductPageGalleryRightArrowBtn />}
       <ProductPageGalleryFooterStyle>
         <ProductThumbnailGallery />
       </ProductPageGalleryFooterStyle>

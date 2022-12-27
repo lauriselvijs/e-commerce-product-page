@@ -1,5 +1,5 @@
 import styled from "styled-components/macro";
-import { IOverlayStyle } from "../../types/Overlay.style";
+import { IOverlayStyle } from "../../types/styles/Overlay.style";
 
 export const OverlayStyle = styled.div<IOverlayStyle>`
   display: ${({ selected }) => (selected ? "flex" : "none")};

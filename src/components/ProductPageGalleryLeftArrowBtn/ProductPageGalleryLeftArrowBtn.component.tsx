@@ -1,12 +1,10 @@
-import React from "react";
 import { useAppDispatch } from "../../hooks/Store.hook";
-import { IButton } from "../../types/Button.d";
 import { ProductPageGalleryOverlayModalLeftArrowBtnStyle } from "./ProductPageGalleryLeftArrowBtn.style";
 import { bindActionCreators } from "@reduxjs/toolkit";
 import { ProductGalleryActions } from "../../store/features/ProductGallery/ProductGallery.slice";
 import { SHOES } from "../../constants/Products.const";
 
-const ProductPageGalleryLeftArrowBtn = ({ top, left }: IButton) => {
+const ProductPageGalleryLeftArrowBtn = () => {
   const appDispatch = useAppDispatch();
   const { prevImg } = bindActionCreators(ProductGalleryActions, appDispatch);
 
@@ -16,8 +14,6 @@ const ProductPageGalleryLeftArrowBtn = ({ top, left }: IButton) => {
 
   return (
     <ProductPageGalleryOverlayModalLeftArrowBtnStyle
-      top={top}
-      left={left}
       aria-label="Previous image"
       onClick={onProductPageGalleryLeftArrowBtn}
     >

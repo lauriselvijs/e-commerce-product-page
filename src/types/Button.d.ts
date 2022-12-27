@@ -1,4 +1,4 @@
-export interface IButton {
+export interface Button {
   top: string;
   left: string;
 }

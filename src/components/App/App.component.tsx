@@ -67,7 +67,7 @@ const App = () => {
       <ThemeProvider theme={theme}>
         <GlobalStyle />
         <Router>
-          <button onClick={darkMode}>Dark Mode</button>
+          {/* <button onClick={darkMode}>Dark Mode</button> */}
           <Routes>
             <Route path={HOME_URL} element={<Layout />}>
               <Route

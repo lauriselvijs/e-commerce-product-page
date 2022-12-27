@@ -1,7 +1,7 @@
-import { IContainer } from "./Container";
+import { Container } from "./Container";
 
-export interface IFontProvider {
+export interface FontProvider {
   fontFamilyName: string;
   fontWeight: { [key: string]: string };
-  children: IContainer["children"];
+  children: Container["children"];
 }

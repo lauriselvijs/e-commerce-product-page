@@ -1,4 +1,4 @@
-import { IGallery } from "./Gallery.d";
+import { Gallery } from "./Gallery";
 
 export interface IProduct {
   product_id: string;
@@ -10,7 +10,7 @@ export interface IProduct {
   product_disc: number | null;
   product_price_with_disc: number | null;
   product_qty: number;
-  product_gallery: IGallery[];
+  product_gallery: Gallery[];
   product_attr: IProductAttr | null;
 }
 

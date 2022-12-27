@@ -1,10 +1,8 @@
-import React from "react";
 import {
   ProductPageGalleryOverlayModalStyle,
   ProductPageGalleryOverlayModalCloseBtnStyle,
   ProductPageGalleryImgContainerStyle,
 } from "./ProductPageGalleryOverlay.style";
-import FirstProductImage from "../../asset/images/image-product-1.jpg";
 import ProductThumbnailGallery from "../ProductThumbnailGallery";
 import {
   ProductPageGalleryFooterStyle,
@@ -20,8 +18,23 @@ import {
   ProductGalleryActions,
   ProductGalleryName,
 } from "../../store/features/ProductGallery/ProductGallery.slice";
+import { MouseEventHandler, useRef } from "react";
 
 const ProductPageGalleryOverlay = () => {
+  const modalRef = useRef<HTMLDivElement | null>(null);
+
+  const handleClickOutsideGallery = (
+    event: MouseEventHandler<HTMLDivElement>
+  ) => {
+    // if (
+    //   modalRef.current &&
+    //   !modalRef.current.contains(event.target)
+    // ) {
+    //   closeGalleryOverlay();
+    // }
+    console.log(event);
+  };
+
   const { showGalleryOverlay, currentImg } = useAppSelector(
     (state: RootState) => state[ProductGalleryName]
   );
@@ -36,10 +49,12 @@ const ProductPageGalleryOverlay = () => {
   };
 
   return (
-    <OverlayStyle selected={showGalleryOverlay}>
-      <ProductPageGalleryOverlayModalStyle>
+    <OverlayStyle
+      selected={showGalleryOverlay}
+      onClick={handleClickOutsideGallery}
+    >
+      <ProductPageGalleryOverlayModalStyle ref={modalRef}>
         <ProductPageGalleryImgContainerStyle>
-          {" "}
           <ProductPageGalleryOverlayModalCloseBtnStyle
             aria-label="Close gallery"
             onClick={onProductPageGalleryOverlayModalCloseBtnClick}
@@ -52,14 +67,14 @@ const ProductPageGalleryOverlay = () => {
               />
             </svg>
           </ProductPageGalleryOverlayModalCloseBtnStyle>
-          <ProductPageGalleryLeftArrowBtn top={"46%"} left={"-5%"} />
+          <ProductPageGalleryLeftArrowBtn />
           <ProductPageGalleryImgStyle
             width={476}
             height={476}
             src={currentImg}
             alt="Product"
           />
-          <ProductPageGalleryRightArrowBtn top={"46%"} left={"95%"} />
+          <ProductPageGalleryRightArrowBtn />
         </ProductPageGalleryImgContainerStyle>
 
         <ProductPageGalleryFooterStyle
