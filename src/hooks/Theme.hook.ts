@@ -5,6 +5,7 @@ import { ThemeActions, ThemeName } from "../store/features/Theme/Theme.slice";
 import { useAppDispatch, useAppSelector } from "./Store.hook";
 
 export interface UseTheme {
+  clearTheme: () => void;
   setTheme: (theme: string) => void;
 }
 
@@ -25,11 +26,13 @@ export const useTheme = (): UseTheme => {
     if (themeName !== defaultTheme && themeName) {
       themeUpdated(themeName);
       document.documentElement.className = themeName;
-    } else if (themeName === defaultTheme || !themeName) {
-      themeUpdated("");
-      document.documentElement.className = "";
     }
   };
 
-  return { setTheme };
+  const clearTheme = (): void => {
+    themeUpdated("");
+    document.documentElement.className = "";
+  };
+
+  return { clearTheme, setTheme };
 };

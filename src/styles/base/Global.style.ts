@@ -1,18 +1,9 @@
 import { createGlobalStyle } from "styled-components";
-import { theme } from "../../types/styles/Theme.style";
-
-// Themes
-export const darkOrange: theme = {
-  theme: { name: "dark-orange", primary: "hsl(26, 100%, 20%)" },
-};
-
-export const blue: theme = {
-  theme: { name: "dark", primary: "hsl(240, 100%, 20%)" },
-};
+import { defaultTheme, blueTheme, darkOrangeTheme } from "../theme";
 
 export const GlobalStyle = createGlobalStyle`
   :root {
-    --color-primary: hsl(26, 100%, 55%);
+    --color-primary: ${defaultTheme.color.primary};;
     --color-primary-light: hsl(25, 100%, 94%);
     --color-primary-very-light: hsl(360, 100%, 100%);
     --color-secondary: hsl(220, 14%, 75%);
@@ -24,12 +15,12 @@ export const GlobalStyle = createGlobalStyle`
     --color-black: hsl(0, 0%, 0%);
   }
 
-  .${darkOrange.theme.name}{
-    --color-primary: ${darkOrange.theme.primary};
+  .${blueTheme.name}{
+    --color-primary: ${blueTheme.color.primary};
   }
 
-  .${blue.theme.name}{
-    --color-primary: ${blue.theme.primary};
+  .${darkOrangeTheme.name}{
+    --color-primary: ${darkOrangeTheme.color.primary};
   }
 
   body {

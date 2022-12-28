@@ -1,3 +1,6 @@
-export interface theme {
-  theme: { name: string; primary: string };
+import { DefaultTheme } from "styled-components";
+
+export interface Theme {
+  name: string;
+  color: Partial<DefaultTheme["color"]>;
 }

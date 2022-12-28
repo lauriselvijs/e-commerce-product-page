@@ -1,16 +1,20 @@
 import { useTheme } from "../../hooks/Theme.hook";
-import { theme } from "../../types/styles/Theme.style";
-import { ThemeBtnBtnStyle } from "./ThemeBtn.style";
+import { Theme } from "../../types/styles/Theme.style";
+import { ThemeBtnStyle } from "./ThemeBtn.style";
 
-const ThemeBtn = ({ theme: { name, primary } }: theme) => {
-  const { setTheme } = useTheme();
+const ThemeBtn = ({ name, color: { primary } }: Theme) => {
+  const { setTheme, clearTheme } = useTheme();
 
   const onDarkThemeBtnClick = () => {
-    setTheme(name);
+    name ? setTheme(name) : clearTheme();
   };
 
   return (
-    <ThemeBtnBtnStyle aria-label="Change theme" onClick={onDarkThemeBtnClick} />
+    <ThemeBtnStyle
+      bgColor={primary}
+      aria-label="Change theme"
+      onClick={onDarkThemeBtnClick}
+    />
   );
 };
 
