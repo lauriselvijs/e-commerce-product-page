@@ -1,6 +1,6 @@
-import { IProductGallery } from "./ProductGallery.d";
+import { ProductGallery } from "./ProductGallery.d";
 
-const initialState: IProductGallery = {
+const initialState: ProductGallery = {
   currentImg: "",
   showGalleryOverlay: false,
   gallery: [],

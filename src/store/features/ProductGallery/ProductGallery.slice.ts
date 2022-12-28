@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { IProductGallery } from "./ProductGallery";
+import { ProductGallery as IProductGallery } from "./ProductGallery";
 import { PRODUCT_GALLERY_SLICE_NAME } from "./ProductGallery.const";
 import initialState from "./ProductGallery.initial-state";
 

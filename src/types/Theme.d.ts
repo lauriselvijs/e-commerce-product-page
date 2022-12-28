@@ -1,5 +1,4 @@
 import "styled-components";
-import { Color } from "./Color";
 
 declare module "styled-components" {
   export interface DefaultTheme {
@@ -16,11 +15,18 @@ declare module "styled-components" {
         small: string;
       };
     };
-    color: Color;
-    theme: {
-      id: string;
-      color: Partial<Color>;
-    }[];
+    color: {
+      primary: string;
+      primaryLight: string;
+      primaryVeryLight: string;
+      secondary: string;
+      secondaryLight: string;
+      secondaryDark: string;
+      secondaryVeryDark: string;
+      overlay: string;
+      white: string;
+      black: string;
+    };
     media: {
       mobile: {
         maxWidth: string;
