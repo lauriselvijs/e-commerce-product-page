@@ -1,4 +1,14 @@
 import { createGlobalStyle } from "styled-components";
+import { theme } from "../../types/styles/Theme.style";
+
+// Themes
+export const darkOrange: theme = {
+  theme: { name: "dark-orange", primary: "hsl(26, 100%, 20%)" },
+};
+
+export const blue: theme = {
+  theme: { name: "dark", primary: "hsl(240, 100%, 20%)" },
+};
 
 export const GlobalStyle = createGlobalStyle`
   :root {
@@ -14,8 +24,12 @@ export const GlobalStyle = createGlobalStyle`
     --color-black: hsl(0, 0%, 0%);
   }
 
-  .dark-theme{
-    --color-primary: hsl(26, 100%, 20%);
+  .${darkOrange.theme.name}{
+    --color-primary: ${darkOrange.theme.primary};
+  }
+
+  .${blue.theme.name}{
+    --color-primary: ${blue.theme.primary};
   }
 
   body {

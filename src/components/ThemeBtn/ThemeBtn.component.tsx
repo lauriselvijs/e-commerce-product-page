@@ -1,19 +1,16 @@
 import { useTheme } from "../../hooks/Theme.hook";
-import { SecondaryBtnStyle } from "../../styles/shared/Button.style";
+import { theme } from "../../types/styles/Theme.style";
+import { ThemeBtnBtnStyle } from "./ThemeBtn.style";
 
-const ThemeBtn = () => {
+const ThemeBtn = ({ theme: { name, primary } }: theme) => {
   const { setTheme } = useTheme();
 
   const onDarkThemeBtnClick = () => {
-    setTheme("dark-theme");
+    setTheme(name);
   };
 
   return (
-    <SecondaryBtnStyle
-      style={{ backgroundColor: "yellow" }}
-      aria-label="Change theme"
-      onClick={onDarkThemeBtnClick}
-    />
+    <ThemeBtnBtnStyle aria-label="Change theme" onClick={onDarkThemeBtnClick} />
   );
 };
 
