@@ -1,21 +1,32 @@
 import { useTheme } from "../../hooks/Theme.hook";
-import { Theme } from "../../types/styles/Theme.style";
 import { ThemeBtnStyle } from "./ThemeBtn.style";
+import { themes } from "../../styles/theme";
+import { keys } from "../../utils/Object.util";
 
-const ThemeBtn = ({ name, color: { primary } }: Theme) => {
+const ThemeBtn = () => {
   const { setTheme, clearTheme } = useTheme();
 
-  const onDarkThemeBtnClick = () => {
-    name ? setTheme(name) : clearTheme();
-  };
+  const renderThemeBtn = keys(themes).map((theme) => {
+    const {
+      name,
+      color: { primary },
+    } = themes[theme];
 
-  return (
-    <ThemeBtnStyle
-      bgColor={primary}
-      aria-label="Change theme"
-      onClick={onDarkThemeBtnClick}
-    />
-  );
+    const onDarkThemeBtnClick = () => {
+      name ? setTheme(name) : clearTheme();
+    };
+
+    return (
+      <ThemeBtnStyle
+        key={name}
+        bgColor={primary}
+        aria-label="Change theme"
+        onClick={onDarkThemeBtnClick}
+      />
+    );
+  });
+
+  return <>{renderThemeBtn}</>;
 };
 
 export default ThemeBtn;

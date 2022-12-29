@@ -11,6 +11,7 @@ import { ProductCategoriesItemsStyle } from "../../styles/shared/List.style";
 import { useAppDispatch } from "../../hooks/Store.hook";
 import { HamburgerMenuActions } from "../../store/features/HamburgerMenu/HamburgerMenu.slice";
 import { bindActionCreators } from "@reduxjs/toolkit";
+import ThemeBtn from "../ThemeBtn";
 
 const ProductCategories = () => {
   const appDispatch = useAppDispatch();
@@ -37,6 +38,7 @@ const ProductCategories = () => {
         </HamburgerMenuBtnStyle>
       </HamburgerMenuBtnContainerStyle>
       <ProductCategoriesItemsStyle showOnMobile={false}>
+        <ThemeBtn />
         <ProductCategoriesItems />
       </ProductCategoriesItemsStyle>
     </>

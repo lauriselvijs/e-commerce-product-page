@@ -15,4 +15,9 @@ export const ProductCategoriesItemsStyle = styled.div<IListStyle>`
     flex-direction: column;
     padding-top: 50px;
   }
+
+  @media (max-width: ${({ theme }) => theme.media.tablet.maxWidth}) {
+    max-width: 50%;
+    overflow: auto;
+  }
 `;
