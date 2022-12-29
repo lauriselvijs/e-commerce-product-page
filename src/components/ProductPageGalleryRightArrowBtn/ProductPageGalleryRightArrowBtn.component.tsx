@@ -1,12 +1,12 @@
 import React from "react";
-import { IButton } from "../../types/Button";
+import { Button } from "../../types/Button";
 import { ProductPageGalleryRightArrowBtnStyle } from "./ProductPageGalleryRightArrowBtn.style";
 import { bindActionCreators } from "@reduxjs/toolkit";
 import { ProductGalleryActions } from "../../store/features/ProductGallery/ProductGallery.slice";
 import { useAppDispatch } from "../../hooks/Store.hook";
 import { SHOES } from "../../constants/Products.const";
 
-const ProductPageGalleryRightArrowBtn = ({ top, left }: IButton) => {
+const ProductPageGalleryRightArrowBtn = () => {
   const appDispatch = useAppDispatch();
   const { nextImg } = bindActionCreators(ProductGalleryActions, appDispatch);
 
@@ -16,8 +16,6 @@ const ProductPageGalleryRightArrowBtn = ({ top, left }: IButton) => {
 
   return (
     <ProductPageGalleryRightArrowBtnStyle
-      top={top}
-      left={left}
       aria-label="Next image"
       onClick={onProductPageGalleryRightArrowBtnClick}
     >

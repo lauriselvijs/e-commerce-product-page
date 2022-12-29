@@ -1,15 +1,13 @@
-import React, { useState, useEffect } from "react";
-import { RootState } from "../store/app/store";
-import { ThemeName } from "../store/features/Theme/Theme.slice";
-import { useAppSelector } from "./Store.hook";
+import { useState, useEffect } from "react";
+import theme from "../styles/shared/Theme.style";
 
 export const useDetectMobileScreen = (): boolean => {
-  const theme = useAppSelector((state: RootState) => state[ThemeName]);
   const {
     media: {
       mobile: { maxWidth },
     },
   } = theme;
+
   const [width, setWidth] = useState<number>(0);
   const [isMobile, setIsMobile] = useState<boolean>(false);
 

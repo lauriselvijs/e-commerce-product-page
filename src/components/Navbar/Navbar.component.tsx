@@ -1,4 +1,3 @@
-import React from "react";
 import ShoppingCartBtn from "../ShoppingCartBtn";
 import CustomerProfileBtn from "../CustomerProfileBtn";
 import Logo from "../Logo";

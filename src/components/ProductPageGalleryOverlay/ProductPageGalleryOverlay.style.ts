@@ -12,10 +12,8 @@ export const ProductPageGalleryOverlayModalStyle = styled.div`
 export const ProductPageGalleryImgContainerStyle = styled.div`
   position: relative;
 
-  @media (max-width: ${({ theme }) => theme.media.tablet.maxWidth}) {
-    width: 476px;
-    height: 476px;
-  }
+  width: 476px;
+  height: auto;
 `;
 
 export const ProductPageGalleryOverlayModalCloseBtnStyle = styled.button`
@@ -35,7 +33,7 @@ export const ProductPageGalleryOverlayModalCloseBtnStyle = styled.button`
     fill: ${({ theme }) => theme.color.primaryVeryLight};
   }
 
-  :hover path {
+  &:hover path {
     fill: ${({ theme }) => theme.color.primary};
   }
 `;

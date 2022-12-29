@@ -1,5 +1,4 @@
 import styled from "styled-components/macro";
-import { ISecondaryBtnStyle } from "../../types/Button.style";
 
 export const PrimaryBtnStyle = styled.button`
   height: 55px;
@@ -29,21 +28,19 @@ export const PrimaryBtnStyle = styled.button`
   }
 `;
 
-export const SecondaryBtnStyle = styled.button<ISecondaryBtnStyle>`
-  display: flex;
-  justify-content: center;
+export const SecondaryBtnStyle = styled.button`
   align-items: center;
-  position: absolute;
-
-  width: 48px;
-  height: 48px;
-
   border-radius: 50%;
   border: none;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  padding: 16px;
 `;
 
 export const QuantityBtnStyle = styled.button`
+  /* TODO: 
+  [ ] - remove absolute position from global styling */
   position: absolute;
   display: flex;
   justify-content: center;

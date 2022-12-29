@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { ProductCategoriesItemsStyle } from "../../styles/shared/List.style";
 import ProductCategoriesItems from "../ProductCategoriesItems";
 import {
@@ -17,6 +17,7 @@ import {
   HamburgerMenuActions,
   HamburgerMenuName,
 } from "../../store/features/HamburgerMenu/HamburgerMenu.slice";
+import ThemeBtn from "../ThemeBtn";
 
 const HamburgerMenuOverlay = () => {
   const [showHamburgerMenuOverlay, setShowHamburgerMenuOverlay] =
@@ -72,6 +73,7 @@ const HamburgerMenuOverlay = () => {
             />
           </HamburgerMenuOverlayModalCloseBtnStyle>
           <ProductCategoriesItemsStyle showOnMobile={showHamburgerMenu}>
+            <ThemeBtn />
             <ProductCategoriesItems />
           </ProductCategoriesItemsStyle>
         </HamburgerMenuOverlayModalStyle>

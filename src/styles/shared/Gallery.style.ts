@@ -1,5 +1,5 @@
 import styled from "styled-components/macro";
-import { IProductPageGalleryFooterStyle } from "../../types/Gallery.style.d";
+import { IProductPageGalleryFooterStyle } from "../../types/styles/Gallery.style.d";
 
 export const ProductPageGalleryImgStyle = styled.img`
   border-radius: 10px;
@@ -17,12 +17,13 @@ export const ProductPageGalleryImgStyle = styled.img`
 export const ProductPageGalleryFooterStyle = styled.div<IProductPageGalleryFooterStyle>`
   display: flex;
   justify-content: ${({ justifyContent }) =>
-    justifyContent ? justifyContent : "space-between"};
+    justifyContent ? justifyContent : "space-evenly"};
   align-items: center;
 
   padding-top: 20px;
 
-  width: ${({ galleryFooterWidth }) => (galleryFooterWidth ? galleryFooterWidth : "100%")};
+  width: ${({ galleryFooterWidth }) =>
+    galleryFooterWidth ? galleryFooterWidth : "100%"};
 
   @media (max-width: ${({ theme }) => theme.media.mobile.maxWidth}) {
     display: none;

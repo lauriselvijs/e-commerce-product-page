@@ -1,23 +1,24 @@
 import React from "react";
 import {
   CustomerProfilePicStyle,
-  CustomerProfileLinkStyle,
+  CustomerProfileStyle,
 } from "./CustomerProfileLink.style";
 import CustomerProfilePic from "../../asset/images/image-avatar.png";
+import { Link } from "react-router-dom";
 
 const CustomerProfileBtn = () => {
   return (
-    <CustomerProfileLinkStyle
-      href="/user-profile"
-      aria-label="Go to user profile"
-    >
-      <CustomerProfilePicStyle
-        alt="User profile"
-        src={CustomerProfilePic}
-        width={42}
-        height={42}
-      />
-    </CustomerProfileLinkStyle>
+    <CustomerProfileStyle>
+      <Link to="/user-profile">
+        <CustomerProfilePicStyle
+          alt="User profile"
+          aria-label="Go to user profile"
+          src={CustomerProfilePic}
+          width={42}
+          height={42}
+        />
+      </Link>
+    </CustomerProfileStyle>
   );
 };
 

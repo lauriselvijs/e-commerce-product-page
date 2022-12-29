@@ -10,6 +10,7 @@ export const HamburgerMenuOverlayStyle = styled(OverlayStyle)`
   .slide-enter {
     width: 0;
   }
+
   .slide-enter-active {
     width: 60vw;
     transition: width 200ms;
@@ -32,19 +33,6 @@ export const HamburgerMenuOverlayModalStyle = styled.div`
   align-items: flex-start;
 
   background-color: ${({ theme }) => theme.color.primaryVeryLight};
-
-  // animation-duration: 200ms;
-  // animation-name: slide-in;
-
-  // @keyframes slide-in {
-  //   from {
-  //     width: 0vw;
-  //   }
-
-  //   to {
-  //     width: 60vw;
-  //   }
-  // }
 
   width: 60vw;
   height: 100vh;

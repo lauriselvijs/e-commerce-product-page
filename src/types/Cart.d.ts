@@ -1,6 +1,6 @@
 import { IProduct } from "../types/Product.d";
 
-export interface ICart {
+export interface Cart {
   productQtyToCart: number;
   cart: IProduct[];
 }

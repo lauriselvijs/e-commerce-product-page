@@ -22,6 +22,6 @@ export const ProductPageGalleryImgContainerStyle = styled.div`
 
   @media (max-width: ${({ theme }) => theme.media.mobile.maxWidth}) {
     width: 100vw;
-    height: 396px;
+    height: auto;
   }
 `;

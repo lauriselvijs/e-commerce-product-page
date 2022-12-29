@@ -1,6 +1,6 @@
-import { ICart } from "../../../types/Cart";
+import { Cart } from "../../../types/Cart";
 
-const initialState: ICart = {
+const initialState: Cart = {
   productQtyToCart: 0,
   cart: [],
 };

@@ -4,15 +4,12 @@ import { SecondaryBtnStyle } from "../../styles/shared/Button.style";
 export const ProductPageGalleryOverlayModalLeftArrowBtnStyle = styled(
   SecondaryBtnStyle
 )`
-  top: ${({ top }) => top};
-  left: ${({ left }) => left};
+  // margin-right: 80%;
+  top: 44.5%;
+  left: 16px;
+  position: absolute;
 
-  :hover path {
+  &:hover path {
     stroke: ${({ theme }) => theme.color.primary};
-  }
-
-  @media (max-width: ${({ theme }) => theme.media.tablet.maxWidth}) {
-    width: 10%;
-    height: 10%;
   }
 `;
