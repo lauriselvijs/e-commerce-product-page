@@ -1,4 +1,3 @@
-import React from "react";
 import { Button } from "../../types/Button";
 import { ProductPageGalleryRightArrowBtnStyle } from "./ProductPageGalleryRightArrowBtn.style";
 import { bindActionCreators } from "@reduxjs/toolkit";

@@ -1,4 +1,3 @@
-import React from "react";
 import {
   NOT_FOUND_ERROR_CODE,
   NOT_FOUND_POSTFIX_MSG,

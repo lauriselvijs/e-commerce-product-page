@@ -1,4 +1,3 @@
-import React from "react";
 import ProductPageGallery from "../../components/ProductPageGallery";
 import ProductPageGalleryOverlay from "../../components/ProductPageGalleryOverlay";
 import ProductPageProductDesc from "../../components/ProductPageProductDesc";

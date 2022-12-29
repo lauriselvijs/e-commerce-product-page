@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { useAppSelector } from "../../hooks/Store.hook";
 import { RootState } from "../../store/app/store";
 import { CartName } from "../../store/features/Cart/Cart.slice";

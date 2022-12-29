@@ -1,4 +1,3 @@
-import React from "react";
 import StoreLogo from "../../asset/images/icons/store-logo.svg";
 import { LogoLinkContainerStyle, LogoLinkStyle, LogoStyle } from "./Logo.style";
 
