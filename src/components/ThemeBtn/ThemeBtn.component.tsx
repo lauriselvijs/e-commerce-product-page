@@ -12,7 +12,7 @@ const ThemeBtn = () => {
       color: { primary },
     } = themes[theme];
 
-    const onDarkThemeBtnClick = () => {
+    const onThemeBtnClick = () => {
       name ? setTheme(name) : clearTheme();
     };
 
@@ -21,7 +21,7 @@ const ThemeBtn = () => {
         key={name}
         bgColor={primary}
         aria-label="Change theme"
-        onClick={onDarkThemeBtnClick}
+        onClick={onThemeBtnClick}
       />
     );
   });
