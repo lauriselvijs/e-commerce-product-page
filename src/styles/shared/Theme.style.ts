@@ -9,9 +9,9 @@ const theme: DefaultTheme = {
       bold: "700",
     },
     size: {
-      large: "32px",
-      medium: "16px",
-      small: "12px",
+      large: "2rem",
+      medium: "1rem",
+      small: "0.75rem",
     },
   },
   color: {
