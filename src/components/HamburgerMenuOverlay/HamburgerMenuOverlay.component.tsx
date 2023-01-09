@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, MouseEvent } from "react";
 import { ProductCategoriesItemsStyle } from "../../styles/shared/List.style";
 import ProductCategoriesItems from "../ProductCategoriesItems";
 import {
@@ -31,8 +31,13 @@ const HamburgerMenuOverlay = () => {
   const { showHamburgerMenu } = useAppSelector(
     (state: RootState) => state[HamburgerMenuName]
   );
-  const hamburgerMenuOverlayModalRef = useRef(null);
+  const hamburgerMenuOverlayModalRef = useRef<HTMLDivElement | null>(null);
   const isMobile = useDetectMobileScreen();
+
+  useEffect(() => {
+    !isMobile && setShowHamburgerMenuOverlay(false);
+    !isMobile && closeHamburgerMenu();
+  }, [isMobile]);
 
   const onHamburgerMenuOverlayModalCloseBtnClick = () => {
     closeHamburgerMenu();
@@ -46,13 +51,20 @@ const HamburgerMenuOverlay = () => {
     setShowHamburgerMenuOverlay(true);
   };
 
-  useEffect(() => {
-    !isMobile && setShowHamburgerMenuOverlay(false);
-    !isMobile && closeHamburgerMenu();
-  }, [isMobile]);
+  const handleClickOutsideGallery = (event: MouseEvent<HTMLDivElement>) => {
+    if (
+      hamburgerMenuOverlayModalRef.current &&
+      !hamburgerMenuOverlayModalRef.current.contains(event.target as Node)
+    ) {
+      closeHamburgerMenu();
+    }
+  };
 
   return (
-    <HamburgerMenuOverlayStyle selected={showHamburgerMenuOverlay}>
+    <HamburgerMenuOverlayStyle
+      onClick={handleClickOutsideGallery}
+      selected={showHamburgerMenuOverlay}
+    >
       <CSSTransition
         nodeRef={hamburgerMenuOverlayModalRef}
         in={showHamburgerMenu}
