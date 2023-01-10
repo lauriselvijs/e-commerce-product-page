@@ -12,6 +12,8 @@ export const ProductPageGalleryOverlayModalStyle = styled.div`
 export const ProductPageGalleryImgContainerStyle = styled.div`
   position: relative;
 
+  cursor: default;
+
   width: 476px;
   height: auto;
 `;

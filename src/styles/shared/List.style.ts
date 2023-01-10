@@ -18,6 +18,7 @@ export const ProductCategoriesItemsStyle = styled.div<IListStyle>`
 
   @media (max-width: ${({ theme }) => theme.media.tablet.maxWidth}) {
     max-width: 50%;
-    overflow: auto;
+    overflow-x: auto;
+    overflow-y: clip;
   }
 `;

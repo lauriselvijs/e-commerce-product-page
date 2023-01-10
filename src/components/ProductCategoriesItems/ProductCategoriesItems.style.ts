@@ -5,7 +5,6 @@ export const ProductCategoriesItemStyle = styled.div`
     cursor: pointer;
     color: ${({ theme }) => theme.color.secondaryDark};
     padding-bottom: 50px;
-
     text-decoration: none;
 
     :hover {

@@ -9,7 +9,15 @@ export const ProductPageGalleryOverlayModalLeftArrowBtnStyle = styled(
   left: 16px;
   position: absolute;
 
-  &:hover path {
-    stroke: ${({ theme }) => theme.color.primary};
+  &:disabled {
+    cursor: not-allowed;
+  }
+
+  @media (hover: hover) {
+    &:not(:disabled) {
+      &:hover path {
+        stroke: ${({ theme }) => theme.color.primary};
+      }
+    }
   }
 `;

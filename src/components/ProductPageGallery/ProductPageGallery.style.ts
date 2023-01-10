@@ -20,7 +20,10 @@ export const ProductPageGalleryImgContainerStyle = styled.div`
   margin: 0;
   padding: 0;
 
+  cursor: zoom-in;
+
   @media (max-width: ${({ theme }) => theme.media.mobile.maxWidth}) {
+    cursor: default;
     width: 100vw;
     height: auto;
   }
