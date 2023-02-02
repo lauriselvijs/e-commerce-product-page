@@ -146,5 +146,4 @@ export const HamburgerMenuOverlayStyle = styled(OverlayStyle)`
 
 ## Author
 
-- Website - [Lauris](https://b2cf56-portfolio.netlify.app/projects)
 - Frontend Mentor - [lauriselvijs](https://www.frontendmentor.io/profile/lauriselvijs)
