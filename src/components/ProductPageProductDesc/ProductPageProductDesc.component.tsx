@@ -16,8 +16,8 @@ import {
   ProductPageQuantityIncBtnStyle,
   ProductPageQuantityDecBtnStyle,
 } from "./ProductPageProductDesc.style";
-import PlusIcon from "../../asset/images/icons/icon-plus.svg";
-import MinusIcon from "../../asset/images/icons/icon-minus.svg";
+import PlusIcon from "../../asset/icons/icon-plus.svg";
+import MinusIcon from "../../asset/icons/icon-minus.svg";
 import { bindActionCreators } from "@reduxjs/toolkit";
 import { useAppDispatch, useAppSelector } from "../../hooks/Store.hook";
 import { CartActions, CartName } from "../../store/features/Cart/Cart.slice";
@@ -86,6 +86,7 @@ const ProductPageProductDesc = () => {
       <ProductPageProductDescFooterStyle>
         <ProductPageQuantityBtnContainerStyle>
           <ProductPageQuantityIncBtnStyle
+            aria-label="Increase quantity"
             onClick={onProductPageQuantityDecBtnClick}
           >
             <ProductPageQuantityDecIconStyle
@@ -93,16 +94,19 @@ const ProductPageProductDesc = () => {
               height={4}
               src={MinusIcon}
               alt="Decrease quantity"
+              aria-hidden="true"
             />
           </ProductPageQuantityIncBtnStyle>{" "}
           {productQtyToCart}{" "}
           <ProductPageQuantityDecBtnStyle
+            aria-label="Decrease quantity"
             onClick={onProductPageQuantityIncBtnClick}
           >
             <ProductPageQuantityIncIconStyle
               width={12}
               height={12}
               src={PlusIcon}
+              aria-hidden="true"
               alt="Increase quantity"
             />
           </ProductPageQuantityDecBtnStyle>

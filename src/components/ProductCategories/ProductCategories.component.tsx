@@ -3,7 +3,7 @@ import {
   HamburgerMenuIconStyle,
   HamburgerMenuBtnContainerStyle,
 } from "./ProductCategories.style";
-import HamburgerIcon from "../../asset/images/icons/icon-menu.svg";
+import HamburgerIcon from "../../asset/icons/icon-menu.svg";
 import HamburgerMenuOverlay from "../HamburgerMenuOverlay";
 import ProductCategoriesItems from "../ProductCategoriesItems";
 import { ProductCategoriesItemsStyle } from "../../styles/shared/List.style";
@@ -27,12 +27,16 @@ const ProductCategories = () => {
     <>
       <HamburgerMenuOverlay />
       <HamburgerMenuBtnContainerStyle>
-        <HamburgerMenuBtnStyle onClick={onHamburgerMenuBtnClick}>
+        <HamburgerMenuBtnStyle
+          aria-label="Close menu"
+          onClick={onHamburgerMenuBtnClick}
+        >
           <HamburgerMenuIconStyle
             src={HamburgerIcon}
             width={16}
             height={15}
             alt="Menu"
+            aria-hidden="true"
           />
         </HamburgerMenuBtnStyle>
       </HamburgerMenuBtnContainerStyle>

@@ -8,7 +8,7 @@ import {
   ShoppingCartModalProductPriceInfoIndentStyle,
   ShoppingCartModalProductPriceInfoStyle,
 } from "./ShoppingCartModalItem.style";
-import DeleteIcon from "../../asset/images/icons/icon-delete.svg";
+import DeleteIcon from "../../asset/icons/icon-delete.svg";
 import { productTotalPriceByQty } from "../../utils/Price.util";
 import { IShoppingCartModalItem } from "./ShoppingCartModalItem.component.d";
 import { useAppDispatch } from "../../hooks/Store.hook";
@@ -63,6 +63,7 @@ const ShoppingCartModalItem = ({
         </ShoppingCartModalProductPriceInfoStyle>
       </ShoppingCartModalProductInfoStyle>
       <ShoppingCartModalProductDeleteBtnStyle
+        aria-label="Delete item"
         onClick={() => onShoppingCartModalProductDeleteBtnClick(product_id)}
       >
         <ShoppingCartModalProductDeleteBtnImgStyle
@@ -70,6 +71,7 @@ const ShoppingCartModalItem = ({
           width={14}
           height={16}
           alt="Delete item from cart"
+          aria-hidden="true"
         />
       </ShoppingCartModalProductDeleteBtnStyle>
     </ShoppingCartModalContentsStyle>
