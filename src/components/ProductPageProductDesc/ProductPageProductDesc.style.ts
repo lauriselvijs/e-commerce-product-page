@@ -1,45 +1,37 @@
 import styled from "styled-components/macro";
+
 import {
   PrimaryBtnStyle,
   QuantityBtnStyle,
-} from "../../styles/shared/Button.style";
+} from "../../styles/components/Button.style";
 import {
   ParagraphStyle,
   PrimaryTextStyle,
-} from "../../styles/shared/Text.style";
+} from "../../styles/components/Text.style";
 
 export const ProductPageProductDescStyle = styled.div`
+  align-items: flex-start;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: flex-start;
-
   padding-top: 60px;
-
   width: 40%;
-
-  transition: padding-top 0.5s;
 
   @media (max-width: ${({ theme }) => theme.media.tablet.maxWidth}) {
     padding-top: 0px;
-
-    transition: padding-top 0.5s;
   }
 
   @media (max-width: ${({ theme }) => theme.media.mobile.maxWidth}) {
     padding-top: 20px;
-
     width: 90%;
   }
 `;
 
 export const ProductPageProductCompanyStyle = styled.div`
-  text-transform: uppercase;
-
-  font-weight: ${({ theme }) => theme.font.weight.bold};
-  font-size: ${({ theme }) => theme.font.size.medium};
-
   color: ${({ theme }) => theme.color.primary};
+  font-size: ${({ theme }) => theme.font.size.medium};
+  font-weight: ${({ theme }) => theme.font.weight.bold};
+  text-transform: uppercase;
 `;
 
 export const ProductPageMainInfoSectionStyle = styled.section``;
@@ -50,140 +42,98 @@ export const ProductPageProductNameStyle = styled(PrimaryTextStyle)`
   }
 `;
 export const ProductPageProductInfoStyle = styled(ParagraphStyle)`
-  font-weight: ${({ theme }) => theme.font.weight.medium};
-
   color: ${({ theme }) => theme.color.secondaryDark};
-
+  font-weight: ${({ theme }) => theme.font.weight.medium};
   padding-bottom: 10px;
 `;
 
 export const ProductPageProductPriceContainerStyle = styled.div`
+  align-items: flex-start;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  flex-wrap: wrap;
   gap: 10px;
 
   @media (max-width: ${({ theme }) => theme.media.mobile.maxWidth}) {
+    align-items: center;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: 90%;
-
     gap: 5vw;
+    justify-content: space-between;
+    width: 90%;
   }
 `;
 export const ProductPageProductDiscPriceStyle = styled.div`
-  display: flex;
   align-items: center;
-  gap: 20px;
-
-  font-weight: ${({ theme }) => theme.font.weight.bold};
-  font-size: ${({ theme }) => theme.font.size.large};
-
   color: ${({ theme }) => theme.color.secondaryVeryDark};
+  display: flex;
+  flex-wrap: wrap;
+  font-size: ${({ theme }) => theme.font.size.large};
+  font-weight: ${({ theme }) => theme.font.weight.bold};
+  gap: 20px;
 `;
 export const ProductPageProductPriceDiscPercentageBadgeStyle = styled.div`
-  padding: 0;
+  background-color: ${({ theme }) => theme.color.primaryLight};
+  border-radius: 8px;
+  color: ${({ theme }) => theme.color.primary};
+  font-size: ${({ theme }) => theme.font.size.medium};
+  font-weight: ${({ theme }) => theme.font.weight.bold};
   margin: 0;
+  padding: 0;
+  padding: 1px 8px;
   text-align: center;
   vertical-align: center;
-
-  font-weight: ${({ theme }) => theme.font.weight.bold};
-  font-size: ${({ theme }) => theme.font.size.medium};
-
-  color: ${({ theme }) => theme.color.primary};
-  background-color: ${({ theme }) => theme.color.primaryLight};
   width: fit-content;
-  padding: 1px 8px;
-  border-radius: 8px;
 `;
 export const ProductPageProductRealPriceStyle = styled.div`
-  font-weight: ${({ theme }) => theme.font.weight.medium};
-  font-size: ${({ theme }) => theme.font.size.medium};
-
   color: ${({ theme }) => theme.color.secondary};
+  font-size: ${({ theme }) => theme.font.size.medium};
+  font-weight: ${({ theme }) => theme.font.weight.medium};
   text-decoration: line-through;
 `;
 
 export const ProductPageProductDescFooterStyle = styled.div`
-  display: flex;
   align-items: center;
-
+  display: flex;
   gap: 20px;
-
   padding-top: 30px;
-
-  transition: padding-top 0.5s;
+  width: 100%;
 
   @media (max-width: ${({ theme }) => theme.media.tablet.maxWidth}) {
-    padding-top: 15px;
-
+    align-items: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-
-    transition: padding-top 0.5s;
+    padding-top: 15px;
   }
 `;
 
 export const ProductPageQuantityBtnContainerStyle = styled.div`
-  position: relative;
-  display: flex;
-  justify-content: space-around;
   align-items: center;
-
-  border: none;
-  border-radius: 10px;
-
-  height: 55px;
-  width: 160px;
-
-  font-weight: ${({ theme }) => theme.font.weight.bold};
-  font-size: ${({ theme }) => theme.font.size.medium};
-
-  color: ${({ theme }) => theme.color.secondaryVeryDark};
   background-color: ${({ theme }) => theme.color.secondaryLight};
-
-  transition: width 0.5s;
-
-  @media (max-width: ${({ theme }) => theme.media.tablet.maxWidth}) {
-    width: 250px;
-
-    transition: width 0.5s;
-  }
-
-  @media (max-width: ${({ theme }) => theme.media.mobile.maxWidth}) {
-    width: 85vw;
-
-    transition: width 0.5s;
-  }
+  border-radius: 10px;
+  border: none;
+  color: ${({ theme }) => theme.color.secondaryVeryDark};
+  display: flex;
+  font-size: ${({ theme }) => theme.font.size.medium};
+  font-weight: ${({ theme }) => theme.font.weight.bold};
+  justify-content: center;
+  min-height: 55px;
+  position: relative;
+  width: 100%;
 `;
 
 export const ProductPageQuantityDecBtnStyle = styled(QuantityBtnStyle)`
-  top: 0px;
-  left: 105px;
-
-  @media (max-width: ${({ theme }) => theme.media.tablet.maxWidth}) {
-    left: 195px;
-
-    transition: left 0.5s;
-  }
-
-  @media (max-width: ${({ theme }) => theme.media.mobile.maxWidth}) {
-    left: 72vw;
-
-    transition: left 0.5s;
-  }
+  right: 0;
+  top: 0;
 
   :hover {
     opacity: 0.6;
   }
 `;
 export const ProductPageQuantityIncBtnStyle = styled(QuantityBtnStyle)`
-  top: 0px;
-  left: 0px;
+  left: 0;
+  top: 0;
 
   :hover {
     opacity: 0.6;
@@ -193,25 +143,16 @@ export const ProductPageQuantityIncBtnStyle = styled(QuantityBtnStyle)`
 export const ProductPageQuantityIncIconStyle = styled.img``;
 export const ProductPageQuantityDecIconStyle = styled.img``;
 export const ProductPageAddToCartBtnStyle = styled(PrimaryBtnStyle)`
-  width: 250px;
-
-  display: flex;
   align-items: center;
-  justify-content: center;
+  box-shadow: 0px 20px 20px 0px ${({ theme }) => theme.color.primaryLight};
+  display: flex;
   gap: 15px;
+  justify-content: center;
+  width: 100%;
 
   svg {
-    transform: scale(0.8);
     path {
       fill: ${({ theme }) => theme.color.primaryVeryLight};
     }
-  }
-
-  box-shadow: 0px 20px 20px 0px ${({ theme }) => theme.color.primaryLight};
-
-  @media (max-width: ${({ theme }) => theme.media.mobile.maxWidth}) {
-    width: 85vw;
-
-    transition: width 0.5s;
   }
 `;

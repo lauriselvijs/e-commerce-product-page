@@ -16,6 +16,9 @@ export const NavbarStyle = styled.nav`
 
   transition: margin-left 0.5s;
 
+  overflow-y: hidden;
+  overflow-x: auto;
+
   @media (max-width: ${({ theme }) => theme.media.tablet.maxWidth}) {
     gap: 20px;
 

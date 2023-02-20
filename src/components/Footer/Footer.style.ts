@@ -4,7 +4,7 @@ export const FooterStyle = styled.footer`
   position: static;
   display: flex;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
   height: 20px;
   padding-bottom: 10px;
   z-index: -1;
@@ -12,8 +12,6 @@ export const FooterStyle = styled.footer`
   text-align: center;
 
   @media (max-width: ${({ theme }) => theme.media.tablet.maxWidth}) {
-    height: 25vh;
-
-    transition: height 0.5s;
+    flex-direction: column;
   }
 `;

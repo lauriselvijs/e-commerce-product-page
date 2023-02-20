@@ -2,7 +2,7 @@ import { useEffect, useRef, useState, MouseEvent } from "react";
 import { CSSTransition } from "react-transition-group";
 import { bindActionCreators } from "@reduxjs/toolkit";
 
-import { ProductCategoriesItemsStyle } from "../../styles/shared/List.style";
+import { ProductCategoriesItemsStyle } from "../../styles/components/List.style";
 import ProductCategoriesItems from "../ProductCategoriesItems";
 import IconClose from "../../asset/icons/icon-close.svg";
 import { useDetectMobileScreen } from "../../hooks/Screen.hook";

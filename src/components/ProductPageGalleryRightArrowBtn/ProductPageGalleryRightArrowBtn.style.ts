@@ -1,5 +1,5 @@
 import styled from "styled-components/macro";
-import { SecondaryBtnStyle } from "../../styles/shared/Button.style";
+import { SecondaryBtnStyle } from "../../styles/components/Button.style";
 
 export const ProductPageGalleryRightArrowBtnStyle = styled(SecondaryBtnStyle)`
   top: 44.5%;

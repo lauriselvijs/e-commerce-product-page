@@ -39,8 +39,6 @@ export const SecondaryBtnStyle = styled.button`
 `;
 
 export const QuantityBtnStyle = styled.button`
-  /* TODO: 
-  [ ] - remove absolute position from global styling */
   position: absolute;
   display: flex;
   justify-content: center;

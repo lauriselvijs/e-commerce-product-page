@@ -3,7 +3,7 @@ import ProductThumbnailGallery from "../ProductThumbnailGallery";
 import {
   ProductPageGalleryFooterStyle,
   ProductPageGalleryImgStyle,
-} from "../../styles/shared/Gallery.style";
+} from "../../styles/components/Gallery.style";
 import {
   ProductPageGalleryImgContainerStyle,
   ProductPageGalleryStyle,

@@ -24,9 +24,10 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    background-color: ${({ theme }) => theme.color.white};
-    padding: 0px;
     margin: 0px;
+    padding: 0px;
+
+    background-color: ${({ theme }) => theme.color.white};
     font-family: ${({ theme }) => theme.font.family};
   }
 

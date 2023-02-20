@@ -6,7 +6,7 @@ import {
   ShoppingCartModalStyle,
   ShoppingCartModalTitleStyle,
 } from "./ShoppingCartModal.style";
-import { PrimaryBtnStyle } from "../../styles/shared/Button.style";
+import { PrimaryBtnStyle } from "../../styles/components/Button.style";
 import { IShoppingCartModal } from "./ShoppingCartModal.component.d";
 import { useAppSelector } from "../../hooks/Store.hook";
 import { RootState } from "../../store/app/store";

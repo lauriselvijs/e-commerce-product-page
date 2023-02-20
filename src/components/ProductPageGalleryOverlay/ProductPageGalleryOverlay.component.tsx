@@ -7,8 +7,8 @@ import ProductThumbnailGallery from "../ProductThumbnailGallery";
 import {
   ProductPageGalleryFooterStyle,
   ProductPageGalleryImgStyle,
-} from "../../styles/shared/Gallery.style";
-import { OverlayStyle } from "../../styles/shared/Overlay.style";
+} from "../../styles/components/Gallery.style";
+import { OverlayStyle } from "../../styles/components/Overlay.style";
 import ProductPageGalleryLeftArrowBtn from "../ProductPageGalleryLeftArrowBtn";
 import ProductPageGalleryRightArrowBtn from "../ProductPageGalleryRightArrowBtn";
 import { useAppDispatch, useAppSelector } from "../../hooks/Store.hook";

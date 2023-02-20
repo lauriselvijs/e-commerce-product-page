@@ -17,7 +17,7 @@ import NotFound from "../../pages/NotFound";
 import ProductPage from "../../pages/ProductPage";
 import Layout from "../../pages/shared/Layout";
 import { GlobalStyle } from "../../styles/base/Global.style";
-import theme from "../../styles/shared/Theme.style";
+import theme from "../../styles/theme/DefaultTheme.style";
 import FontProvider from "../FontProvider";
 import Footer from "../Footer";
 

@@ -1,4 +1,4 @@
 import styled from "styled-components/macro";
-import { PageStyle } from "../../styles/shared/Page.style";
+import { PageStyle } from "../../styles/components/Page.style";
 
 export const ProductPageStyle = styled(PageStyle)``;

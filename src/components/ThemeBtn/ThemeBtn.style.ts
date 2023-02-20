@@ -1,5 +1,5 @@
 import styled from "styled-components/macro";
-import { SecondaryBtnStyle } from "../../styles/shared/Button.style";
+import { SecondaryBtnStyle } from "../../styles/components/Button.style";
 import { ThemeBtnStyleProps } from "./ThemeBtn.style.d";
 
 export const ThemeBtnStyle = styled(SecondaryBtnStyle)<ThemeBtnStyleProps>`

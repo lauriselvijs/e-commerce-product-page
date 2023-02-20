@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import theme from "../styles/shared/Theme.style";
+import theme from "../styles/theme/DefaultTheme.style";
 
 export const useDetectMobileScreen = (): boolean => {
   const {

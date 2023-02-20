@@ -9,7 +9,7 @@ import {
   ShoppingCartModalProductPriceInfoStyle,
 } from "./ShoppingCartModalItem.style";
 import DeleteIcon from "../../asset/icons/icon-delete.svg";
-import { productTotalPriceByQty } from "../../utils/Price.util";
+import { productTotalPriceByQty } from "./ShoppingCartModalItem.config";
 import { IShoppingCartModalItem } from "./ShoppingCartModalItem.component.d";
 import { useAppDispatch } from "../../hooks/Store.hook";
 import { bindActionCreators } from "@reduxjs/toolkit";

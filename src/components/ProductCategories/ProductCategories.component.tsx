@@ -6,7 +6,7 @@ import {
 import HamburgerIcon from "../../asset/icons/icon-menu.svg";
 import HamburgerMenuOverlay from "../HamburgerMenuOverlay";
 import ProductCategoriesItems from "../ProductCategoriesItems";
-import { ProductCategoriesItemsStyle } from "../../styles/shared/List.style";
+import { ProductCategoriesItemsStyle } from "../../styles/components/List.style";
 import { useAppDispatch } from "../../hooks/Store.hook";
 import { HamburgerMenuActions } from "../../store/features/HamburgerMenu/HamburgerMenu.slice";
 import { bindActionCreators } from "@reduxjs/toolkit";

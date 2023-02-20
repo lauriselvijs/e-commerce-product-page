@@ -1,11 +1,13 @@
 import styled from "styled-components/macro";
-import { OverlayStyle } from "../../styles/shared/Overlay.style";
+
+import { OverlayStyle } from "../../styles/components/Overlay.style";
+
 import { IHamburgerMenuOverlayModalCloseBtnStyle } from "./HamburgerMenuOverlay.style.d";
 
 export const HamburgerMenuOverlayStyle = styled(OverlayStyle)`
+  align-items: flex-start;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: flex-start;
 
   .slide-enter {
     width: 0;
@@ -20,32 +22,27 @@ export const HamburgerMenuOverlayStyle = styled(OverlayStyle)`
     padding: 0;
     margin: 0;
 
-    width: 0vw;
-
     transition: width 200ms;
+    width: 0vw;
   }
 `;
 
 export const HamburgerMenuOverlayModalStyle = styled.div`
+  align-items: flex-start;
+  background-color: ${({ theme }) => theme.color.primaryVeryLight};
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-
-  background-color: ${({ theme }) => theme.color.primaryVeryLight};
-
-  width: 60vw;
   height: 100vh;
-
-  padding-top: 30px;
+  justify-content: flex-start;
   padding-bottom: 30px;
   padding-left: 30px;
+  padding-top: 30px;
+  width: 60vw;
 `;
 
 export const HamburgerMenuOverlayModalCloseBtnStyle = styled.button`
   background-color: transparent;
   border: none;
-
   cursor: pointer;
 `;
 export const HamburgerMenuOverlayModalCloseBtnIconStyle = styled.img<IHamburgerMenuOverlayModalCloseBtnStyle>`
