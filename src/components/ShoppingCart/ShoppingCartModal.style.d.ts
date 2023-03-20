@@ -1,3 +1,3 @@
-export interface IShoppingCartModalStyle {
+export interface ShoppingCartModalStyle {
   showCart: boolean;
 }

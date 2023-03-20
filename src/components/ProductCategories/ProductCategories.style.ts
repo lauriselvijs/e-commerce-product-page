@@ -49,10 +49,9 @@ export const ProductCategoriesItemStyle = styled.a`
   cursor: pointer;
   color: ${({ theme }) => theme.color.secondaryDark};
   padding-bottom: 50px;
-
   text-decoration: none;
 
-  :hover {
+  &:hover {
     color: ${({ theme }) => theme.color.secondaryVeryDark};
     border-bottom: 5px solid ${({ theme }) => theme.color.primary};
     margin-bottom: -5px;

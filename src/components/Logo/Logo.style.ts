@@ -8,7 +8,8 @@ export const LogoStyle = styled.a`
   text-decoration: none;
 
   @media (max-width: ${({ theme }) => theme.media.mobile.maxWidth}) {
-    order: 2;
     flex: 1;
+    order: 2;
+    overflow: auto;
   }
 `;

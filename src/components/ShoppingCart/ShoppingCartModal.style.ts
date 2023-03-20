@@ -1,38 +1,27 @@
 import styled from "styled-components/macro";
-import { IShoppingCartModalStyle } from "./ShoppingCartModal.style.d";
+import { ShoppingCartModalStyle as  IShoppingCartModalStyle} from "./ShoppingCartModal.style.d";
 
 export const ShoppingCartModalStyle = styled.div<IShoppingCartModalStyle>`
-  display: ${({ showCart }) => (showCart ? "block" : "none")};
-  position: absolute;
-  top: 60px;
-  right: -400%;
-  z-index: 1;
-
+  background-color: ${({ theme }) => theme.color.primaryVeryLight};
   border-radius: 10px;
   box-shadow: 0px 18px 20px 0px ${({ theme }) => theme.color.secondary};
-
-  width: 380px;
-  height: auto;
-
+  color: ${({ theme }) => theme.color.secondaryDark};
+  display: ${({ showCart }) => (showCart ? "block" : "none")};
   font-size: ${({ theme }) => theme.font.size.medium};
   font-weight: ${({ theme }) => theme.font.weight.medium};
-  color: ${({ theme }) => theme.color.secondaryDark};
-
-  background-color: ${({ theme }) => theme.color.primaryVeryLight};
-
-  transition: right 1s;
+  height: auto;
+  position: absolute;
+  right: -400%;
+  top: 60px;
+  min-width: 380px;
+  z-index: 1;
 
   @media (max-width: ${({ theme }) => theme.media.tablet.maxWidth}) {
-    right: -200%;
-
-    transition: right 0.5s;
+    right: -50px;
   }
 
   @media (max-width: ${({ theme }) => theme.media.mobile.maxWidth}) {
-    right: -140%;
-    width: 90vw;
-
-    transition: right 0.5s;
+    min-width: 80vw;
   }
 `;
 
