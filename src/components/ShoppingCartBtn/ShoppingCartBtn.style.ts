@@ -1,5 +1,4 @@
 import styled, { css } from "styled-components/macro";
-import { ShoppingCartModalStyle as  IShoppingCartModalStyle} from "../ShoppingCart/ShoppingCartModal.style.d";
 
 export const ShoppingCartBtnContainerStyle = styled.div`
   height: 60px;
@@ -7,11 +6,10 @@ export const ShoppingCartBtnContainerStyle = styled.div`
 
   @media (max-width: ${({ theme }) => theme.media.mobile.maxWidth}) {
     order: 3;
-
   }
 `;
 
-export const ShoppingCartBtnStyle = styled.button<IShoppingCartModalStyle>`
+export const ShoppingCartBtnStyle = styled.button<{ showCart: boolean }>`
   background-color: transparent;
   border-radius: 50%;
   border: none;

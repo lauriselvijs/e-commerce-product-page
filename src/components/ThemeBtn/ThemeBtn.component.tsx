@@ -1,6 +1,6 @@
 import { useTheme } from "../../hooks/Theme.hook";
 import { ThemeBtnStyle } from "./ThemeBtn.style";
-import { themes } from "../../styles/theme";
+import themes from "../../styles/theme";
 import { keys } from "../../utils/Object.util";
 
 const ThemeBtn = () => {

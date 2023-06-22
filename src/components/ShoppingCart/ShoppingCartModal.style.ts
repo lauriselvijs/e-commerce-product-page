@@ -1,12 +1,10 @@
 import styled from "styled-components/macro";
-import { ShoppingCartModalStyle as  IShoppingCartModalStyle} from "./ShoppingCartModal.style.d";
 
-export const ShoppingCartModalStyle = styled.div<IShoppingCartModalStyle>`
+export const ShoppingCartModalStyle = styled.div`
   background-color: ${({ theme }) => theme.color.primaryVeryLight};
   border-radius: 10px;
   box-shadow: 0px 18px 20px 0px ${({ theme }) => theme.color.secondary};
   color: ${({ theme }) => theme.color.secondaryDark};
-  display: ${({ showCart }) => (showCart ? "block" : "none")};
   font-size: ${({ theme }) => theme.font.size.medium};
   font-weight: ${({ theme }) => theme.font.weight.medium};
   height: auto;
@@ -46,10 +44,6 @@ export const ShoppingCartModalFooterStyle = styled.div`
   padding-bottom: 30px;
   padding-left: 30px;
   padding-right: 30px;
-`;
-
-export const ShoppingCartModalCheckoutLinkStyle = styled.a`
-  text-decoration: none;
 `;
 
 export const ShoppingCartModalEmptyStyle = styled.div`
