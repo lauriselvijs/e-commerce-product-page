@@ -1,45 +1,47 @@
 import { Navigate } from "react-router-dom";
+
 import NotFound from "../pages/NotFound";
 import ProductPage from "../pages/ProductPage";
 import Layout from "../pages/shared/Layout";
 import { SHOES } from "../constants/Products.const";
+
 import { RouteConfig } from "./Routes.d";
 
 const routes: RouteConfig[] = [
   {
-    id: "home.layout",
+    name: "home.layout",
     path: "/",
     element: <Layout />,
     children: [
       {
-        id: "home.index",
+        name: "home.index",
         index: true,
         element: <Navigate to={`product-page/{${SHOES.product_id}`} />,
       },
       {
         path: "product-page",
         element: <ProductPage />,
-        id: "product-page",
+        name: "product-page",
         children: [
           {
-            id: "product-page.show",
+            name: "product-page.show",
             path: ":productId",
             element: <ProductPage />,
           },
         ],
       },
       {
-        id: "user-page.index",
+        name: "user-page.index",
         path: "user-profile",
         element: null,
         children: [
           {
             path: ":userId",
             element: null,
-            id: "user-profile.show",
+            name: "user-profile.show",
             children: [
               {
-                id: "user-profile.single.comments",
+                name: "user-profile.single.comments.index",
                 path: "comments",
                 element: null,
               },
@@ -48,14 +50,14 @@ const routes: RouteConfig[] = [
         ],
       },
       {
+        name: "checkout",
         path: "checkout",
         element: null,
-        id: "checkout",
       },
     ],
   },
   {
-    id: "not-found",
+    name: "not-found",
     path: "*",
     element: <NotFound />,
   },

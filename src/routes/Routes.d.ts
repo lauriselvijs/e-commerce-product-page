@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 
 export interface RouteConfig {
-  id: string | number;
+  name: string | number;
   path?: string;
   element: ReactNode | null;
   index?: true;
