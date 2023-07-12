@@ -1,6 +1,14 @@
+import { motion } from "framer-motion";
 import styled from "styled-components/macro";
+import { pageStyleVariant } from "./Page.config";
 
-export const PageStyle = styled.main`
+export const PageStyle = styled(motion.div).attrs(() => ({
+  initial: "enter",
+  variants: pageStyleVariant,
+  animate: "default",
+  exit: "leave",
+  transition: { type: "spring", stiffness: 60, velocity: 2 },
+}))`
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -8,6 +16,7 @@ export const PageStyle = styled.main`
   padding-left: 20%;
   padding-right: 20%;
   padding-top: 5%;
+  flex: 1;
 
   transition: padding-left 0.5s;
 

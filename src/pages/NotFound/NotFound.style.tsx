@@ -1,6 +1,12 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
-export const NotFoundContainerStyle = styled.div`
+export const NotFoundContainerStyle = styled(motion.div).attrs(() => ({
+  initial: { x: -window.innerWidth },
+  animate: { x: 0 },
+  transition: { type: "spring", stiffness: 60, velocity: 2 },
+  exit: { x: 0 },
+}))`
   display: flex;
   flex-direction: column;
   justify-content: center;

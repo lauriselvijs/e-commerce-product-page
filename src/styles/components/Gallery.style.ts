@@ -1,7 +1,18 @@
 import styled from "styled-components/macro";
-import { IProductPageGalleryFooterStyle } from "../../types/styles/Gallery.style.d";
+import { motion } from "framer-motion";
 
-export const ProductPageGalleryImgStyle = styled.img`
+import {
+  IProductPageGalleryFooterStyle,
+  ProductPageGalleryImgStyleProps,
+} from "../../types/styles/Gallery.style.d";
+
+export const ProductPageGalleryImgStyle = styled(
+  motion.img
+).attrs<ProductPageGalleryImgStyleProps>(({ $animateOnExit }) => ({
+  initial: { width: 0 },
+  animate: { width: "100%" },
+  exit: $animateOnExit ? { width: 0 } : false,
+}))<ProductPageGalleryImgStyleProps>`
   border-radius: 10px;
 
   @media (max-width: ${({ theme }) => theme.media.tablet.maxWidth}) {
@@ -13,6 +24,10 @@ export const ProductPageGalleryImgStyle = styled.img`
     border-radius: 0px;
   }
 `;
+
+ProductPageGalleryImgStyle.defaultProps = {
+  $animateOnExit: false,
+};
 
 export const ProductPageGalleryFooterStyle = styled.div<IProductPageGalleryFooterStyle>`
   display: flex;

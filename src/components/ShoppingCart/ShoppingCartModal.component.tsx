@@ -14,7 +14,7 @@ import ShoppingCartModalItem from "../ShoppingCartModalItem";
 import { CHECKOUT_BTN_NAME } from "../../constants/Button.const";
 import { CART_TITLE, EMPTY_CART_TEXT } from "../../constants/Cart.const";
 import { Link } from "react-router-dom";
-import { findPathByRouteNameAndSetParams } from "../../utils/Router.util";
+// import { findPathByRouteNameAndSetParams } from "../../utils/Router.util";
 
 const ShoppingCartModal = ({ showCart }: IShoppingCartModal) => {
   const { cart } = useAppSelector((state: RootState) => state[CartName]);
@@ -22,12 +22,12 @@ const ShoppingCartModal = ({ showCart }: IShoppingCartModal) => {
   const modalRef = useRef<HTMLDivElement | null>(null);
 
   // REVIEW: Do more testing
-  const routePath = findPathByRouteNameAndSetParams(
-    "user-profile.single.comments.index",
-    { userId: 1 }
-  );
+  // const routePath = findPathByRouteNameAndSetParams(
+  //   "user-profile.single.comments.index",
+  //   { userId: 1 }
+  // );
 
-  console.log(routePath);
+  // console.log(routePath);
 
   const productList = cart.map((product) => (
     <ShoppingCartModalItem product={product} key={product.product_id} />

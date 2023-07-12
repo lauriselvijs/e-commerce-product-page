@@ -5,7 +5,7 @@ const { blueTheme, darkOrangeTheme, defaultTheme } = themes;
 
 export const GlobalStyle = createGlobalStyle`
   :root {
-    --color-primary: ${defaultTheme.color.primary};;
+    --color-primary: ${defaultTheme.color.primary};
     --color-primary-light: hsl(25, 100%, 94%);
     --color-primary-very-light: hsl(360, 100%, 100%);
     --color-secondary: hsl(220, 14%, 75%);
@@ -31,6 +31,12 @@ export const GlobalStyle = createGlobalStyle`
 
     background-color: ${({ theme }) => theme.color.white};
     font-family: ${({ theme }) => theme.font.family};
+  }
+
+  #root{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
   }
 
   a {

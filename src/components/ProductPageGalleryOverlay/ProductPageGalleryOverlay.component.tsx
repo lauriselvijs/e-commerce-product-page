@@ -19,6 +19,7 @@ import {
   ProductGalleryName,
 } from "../../store/features/ProductGallery/ProductGallery.slice";
 import { MouseEvent, useRef } from "react";
+import { AnimatePresence } from "framer-motion";
 
 const ProductPageGalleryOverlay = () => {
   const modalRef = useRef<HTMLDivElement | null>(null);
@@ -62,12 +63,16 @@ const ProductPageGalleryOverlay = () => {
             </svg>
           </ProductPageGalleryOverlayModalCloseBtnStyle>
           <ProductPageGalleryLeftArrowBtn />
-          <ProductPageGalleryImgStyle
-            width={476}
-            height={476}
-            src={currentImg}
-            alt="Product"
-          />
+          <AnimatePresence>
+            <ProductPageGalleryImgStyle
+              $animateOnExit={showGalleryOverlay}
+              width={476}
+              height={476}
+              src={currentImg}
+              key={currentImg}
+              alt="Product"
+            />
+          </AnimatePresence>
           <ProductPageGalleryRightArrowBtn />
         </ProductPageGalleryImgContainerStyle>
 

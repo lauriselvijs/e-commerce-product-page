@@ -1,13 +1,13 @@
-import { useParams } from "react-router-dom";
+// import { useParams } from "react-router-dom";
 import ProductPageGallery from "../../components/ProductPageGallery";
 import ProductPageGalleryOverlay from "../../components/ProductPageGalleryOverlay";
 import ProductPageProductDesc from "../../components/ProductPageProductDesc";
-import { PageStyle } from "../../styles/components/Page.style";
+import { PageStyle } from "../../styles/components/Page";
 
 const ProductPage = () => {
-  const { productId } = useParams();
+  // const { productId } = useParams();
 
-  console.log(productId);
+  // console.log(productId);
 
   return (
     <PageStyle>

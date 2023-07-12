@@ -7,8 +7,11 @@ export const ProductPageGalleryStyle = styled.div`
   justify-content: center;
   align-items: center;
 
+  width: 476px;
+
   @media (max-width: ${({ theme }) => theme.media.tablet.maxWidth}) {
     padding: 20px;
+    width: 100%;
   }
 
   @media (max-width: ${({ theme }) => theme.media.mobile.maxWidth}) {
