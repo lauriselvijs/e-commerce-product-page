@@ -9,9 +9,9 @@ import {
 export const ProductPageGalleryImgStyle = styled(
   motion.img
 ).attrs<ProductPageGalleryImgStyleProps>(({ $animateOnExit }) => ({
-  initial: { width: 0, opacity: 0 },
-  animate: { width: "100%", opacity: 1 },
-  exit: $animateOnExit ? { width: 0, opacity: 0 } : false,
+  initial: { width: 0 },
+  animate: { width: "100%" },
+  exit: $animateOnExit ? { width: 0 } : false,
 }))<ProductPageGalleryImgStyleProps>`
   border-radius: 10px;
 
