@@ -37,8 +37,7 @@ export const GlobalStyle = createGlobalStyle`
     display: flex;
     flex-direction: column;
     height: 100vh;
-    overflow: hidden;
-
+    overflow-x: hidden;
   }
 
   a {
