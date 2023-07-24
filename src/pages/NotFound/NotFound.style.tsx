@@ -5,7 +5,7 @@ export const NotFoundContainerStyle = styled(motion.div).attrs(() => ({
   initial: { y: window.innerHeight },
   animate: { y: 0 },
   transition: { type: "spring", stiffness: 60, velocity: 2 },
-  exit: { y: 0 },
+  exit: { y: -window.innerHeight, height: 0 },
 }))`
   display: flex;
   flex-direction: column;

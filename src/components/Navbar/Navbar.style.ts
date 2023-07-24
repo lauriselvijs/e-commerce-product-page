@@ -11,6 +11,8 @@ export const NavbarStyle = styled.nav`
   padding-top: 40px;
   position: relative;
   transition: margin-left 0.5s;
+  z-index: 1;
+  background-color: ${({ theme }) => theme.color.white};
 
   @media (max-width: ${({ theme }) => theme.media.tablet.maxWidth}) {
     gap: 20px;

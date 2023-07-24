@@ -4,8 +4,10 @@ export const ProductCategoriesItemStyle = styled.div`
   a {
     cursor: pointer;
     color: ${({ theme }) => theme.color.secondaryDark};
+    border-bottom: 0 solid ${({ theme }) => theme.color.primary};
     padding-bottom: 50px;
     text-decoration: none;
+    transition: border-bottom 0.2s linear;
 
     :hover {
       color: ${({ theme }) => theme.color.secondaryVeryDark};

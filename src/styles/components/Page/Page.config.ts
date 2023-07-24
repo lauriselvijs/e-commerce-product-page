@@ -6,6 +6,7 @@ export const pageStyleVariant = {
     y: 0,
   },
   leave: {
-    y: 0,
+    y: -window.innerHeight,
+    height: 0,
   },
 };
