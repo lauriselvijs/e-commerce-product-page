@@ -1,11 +1,11 @@
 export const pageStyleVariant = {
   enter: {
-    x: -window.innerWidth,
+    y: window.innerHeight,
   },
   default: {
-    x: 0,
+    y: 0,
   },
   leave: {
-    x: 0,
+    y: 0,
   },
 };
