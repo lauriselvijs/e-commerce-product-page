@@ -1,12 +1,14 @@
 export const pageStyleVariant = {
   enter: {
-    y: window.innerHeight,
+    position: "absolute",
+    top: window.innerHeight,
   },
   default: {
-    y: 0,
+    top: 0,
+    position: "relative",
   },
-  leave: {
-    y: -window.innerHeight,
-    height: 0,
-  },
+  // leave: {
+  //   position: "absolute",
+  //   top: -window.innerHeight,
+  // },
 };

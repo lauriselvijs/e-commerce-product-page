@@ -2,16 +2,16 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 
 export const NotFoundContainerStyle = styled(motion.div).attrs(() => ({
-  initial: { y: window.innerHeight },
-  animate: { y: 0 },
-  transition: { type: "spring", stiffness: 60, velocity: 2 },
-  exit: { y: -window.innerHeight, height: 0 },
+  initial: { position: "absolute", top: window.innerHeight },
+  animate: { top: 0, position: "relative" },
+  transition: { type: "spring", duration: 1, bounce: 0.4 },
+  // exit: { position: "absolute", top: -window.innerHeight },
 }))`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 95vh;
+  flex: 1;
 `;
 
 export const NotFoundTextStyle = styled.h1`

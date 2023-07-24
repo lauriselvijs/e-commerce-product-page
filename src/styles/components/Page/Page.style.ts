@@ -7,17 +7,15 @@ export const PageStyle = styled(motion.div).attrs(() => ({
   variants: pageStyleVariant,
   animate: "default",
   exit: "leave",
-  transition: { type: "spring", stiffness: 60, velocity: 2 },
+  transition: { type: "spring", duration: 1, bounce: 0.4 },
 }))`
-  display: flex;
-  justify-content: space-between;
   align-items: flex-start;
-
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
   padding-left: 20%;
   padding-right: 20%;
   padding-top: 5%;
-  flex: 1;
-
   transition: padding-left 0.5s;
 
   @media (max-width: ${({ theme }) => theme.media.tablet.maxWidth}) {
