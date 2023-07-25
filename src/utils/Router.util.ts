@@ -1,52 +1,70 @@
-import { RouteConfig } from "../routes/Routes.d";
+import { RouteConfig, RouteItem } from "../routes/Routes.d";
 import routes from "../routes";
 
-export const findPathByRouteNameAndSetParams = (
-  name: string,
-  variable?: { [key: string]: string | number },
-  routeList: RouteConfig[] = routes
-): string | undefined => {
-  const routePath = findPathByRouteName(name, routeList);
-  if (routePath && variable) {
-    return setPathParams(routePath, variable);
-  }
-  return routePath;
-};
+export const generateRouteList = (
+  routeList: RouteConfig[] = routes,
+  parentPath = ""
+): RouteItem[] => {
+  const result: RouteItem[] = [];
 
-export const findPathByRouteName = (
-  name: string,
-  routeList: RouteConfig[] = routes
-): string | undefined => {
-  for (const route of routeList) {
-    if (route.name === name) {
-      return route.path;
+  routeList.forEach((route) => {
+    const { path, children, name } = route;
+
+    const fullPath = parentPath ? `${parentPath}/${path || ""}` : path;
+
+    if (fullPath) {
+      result.push({ path: fullPath, name: name ? name.toString() : "" });
     }
 
-    if (route.children) {
-      const childPath = findPathByRouteName(name, route.children);
-
-      if (route.path === "/") {
-        return route.path + childPath;
-      }
-
-      if (childPath) {
-        return `${route.path}/${childPath}`;
-      }
+    if (children) {
+      const childRoutes = generateRouteList(children, fullPath);
+      result.push(...childRoutes);
     }
-  }
-  return undefined; // If the route is not found
-};
+  });
 
-export const setPathParams = (
-  path: string,
-  variable: { [key: string]: string | number }
-): string => {
-  let result: string = path;
-  for (const key in variable) {
-    if (variable.hasOwnProperty(key)) {
-      const placeholder: string = `:${key}`;
-      result = result.replace(placeholder, variable[key].toString());
-    }
-  }
   return result;
+};
+
+const memoizeGenerateRouteList = (() => {
+  let cache: RouteItem[] | null = null;
+
+  return () => {
+    if (!cache) {
+      cache = generateRouteList();
+    }
+    return cache;
+  };
+})();
+
+export const route = (
+  routeName: string,
+  params?: { [key: string]: string }
+): string => {
+  const routeList: RouteItem[] = memoizeGenerateRouteList();
+  const route: RouteItem | undefined = routeList.find(
+    (route) => route.name === routeName
+  );
+
+  if (!route) {
+    throw new Error(
+      `Route "${routeName}" not found. \nPossible routes are:\n${routeList
+        .map((route) => route.name)
+        .join("\n")}`
+    );
+  }
+
+  const routePath: string[] = route.path.split("/").map((path) => {
+    if (path.startsWith(":") && params) {
+      const paramName: string = path.slice(1);
+
+      return params[paramName] || path;
+    }
+    return path;
+  });
+
+  if (routePath[0]) {
+    return "/" + routePath.join("/");
+  }
+
+  return routePath.join("/");
 };

@@ -6,5 +6,9 @@ export interface RouteConfig {
   element: ReactNode | null;
   index?: true;
   children?: RouteConfig[];
-  wrapper?: true;
+}
+
+export interface RouteItem {
+  path: string;
+  name: string;
 }

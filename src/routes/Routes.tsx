@@ -10,11 +10,11 @@ import { RouteConfig } from "./Routes.d";
 const routes: RouteConfig[] = [
   {
     name: "home.layout",
-    path: "/",
     element: <Layout />,
     children: [
       {
         name: "home.index",
+        path: "/",
         index: true,
         element: <Navigate to={`product-page/{${SHOES.product_id}`} />,
       },
