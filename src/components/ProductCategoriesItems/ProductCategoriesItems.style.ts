@@ -1,6 +1,16 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
-export const ProductCategoriesItemStyle = styled.div`
+export interface ProductCategoriesItemStyleProps {
+  $selected: boolean;
+}
+
+const selectedLink = css`
+  color: ${({ theme }) => theme.color.secondaryVeryDark};
+  border-bottom: 5px solid ${({ theme }) => theme.color.primary};
+  margin-bottom: -5px;
+`;
+
+export const ProductCategoriesItemStyle = styled.div<ProductCategoriesItemStyleProps>`
   a {
     cursor: pointer;
     color: ${({ theme }) => theme.color.secondaryDark};
@@ -9,10 +19,10 @@ export const ProductCategoriesItemStyle = styled.div`
     text-decoration: none;
     transition: border-bottom 0.2s linear;
 
+    ${({ $selected }) => $selected && selectedLink}
+
     :hover {
-      color: ${({ theme }) => theme.color.secondaryVeryDark};
-      border-bottom: 5px solid ${({ theme }) => theme.color.primary};
-      margin-bottom: -5px;
+      ${selectedLink}
     }
 
     @media (max-width: ${({ theme }) => theme.media.mobile.maxWidth}) {

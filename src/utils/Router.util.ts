@@ -53,6 +53,8 @@ export const route = (
     );
   }
 
+  // TODO:
+  // [ ] - Add error reporting for arguments not found.
   const routePath: string[] = route.path.split("/").map((path) => {
     if (path.startsWith(":") && params) {
       const paramName: string = path.slice(1);

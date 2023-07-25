@@ -14,14 +14,14 @@ import ShoppingCartModalItem from "../ShoppingCartModalItem";
 import { CHECKOUT_BTN_NAME } from "../../constants/Button.const";
 import { CART_TITLE, EMPTY_CART_TEXT } from "../../constants/Cart.const";
 import { Link } from "react-router-dom";
-import { route } from "../../utils/Router.util";
+// import { route } from "../../utils/Router.util";
 
 const ShoppingCartModal = ({ showCart }: IShoppingCartModal) => {
   const { cart } = useAppSelector((state: RootState) => state[CartName]);
 
   const modalRef = useRef<HTMLDivElement | null>(null);
 
-  console.log(route("home.index"));
+  // console.log(route("home.index"));
 
   const productList = cart.map((product) => (
     <ShoppingCartModalItem product={product} key={product.product_id} />
