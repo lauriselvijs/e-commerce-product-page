@@ -53,10 +53,12 @@ export const route = (
     );
   }
 
-  // TODO:
-  // [ ] - Add error reporting for arguments not found.
   const routePath: string[] = route.path.split("/").map((path) => {
-    if (path.startsWith(":") && params) {
+    if (path.startsWith(":")) {
+      if (!params) {
+        throw new Error(`Param ${path.replace(":", "")} is missing.`);
+      }
+      
       const paramName: string = path.slice(1);
 
       return params[paramName] || path;
