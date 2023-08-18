@@ -13,7 +13,7 @@ export const generateRouteList = (
     const fullPath = parentPath ? `${parentPath}/${path || ""}` : path;
 
     if (fullPath) {
-      result.push({ path: fullPath, name: name ? name.toString() : "" });
+      result.push({ path: fullPath !== "/" && fullPath !== "*" ? "/" + fullPath : fullPath, name: name ? name.toString() : "" });
     }
 
     if (children) {
